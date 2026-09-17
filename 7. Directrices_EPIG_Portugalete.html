@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directrices EPIG · Ayuntamiento de Portugalete</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#7B2D8E;--magenta:#C62270;--orange:#D85A30;--blue:#115685;--dark:#2D2D2D;--gray:#555;--bg:#f0edf2;--tint:#F5F0F7;--tint2:#EFE7F3;--border:#e2e8f0;--white:#fff;}
+*{box-sizing:border-box;}
+body{font-family:'Century Gothic','Futura',sans-serif;color:var(--dark);font-size:14px;line-height:1.7;background:var(--bg);margin:0;}
+.container{max-width:860px;margin:0 auto;background:var(--white);min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.08);}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 34px;background:linear-gradient(90deg,var(--purple),var(--magenta));color:#fff;position:sticky;top:0;z-index:5;}
+.topbar .brand{font-family:'Comfortaa',sans-serif;font-weight:700;font-size:15px;letter-spacing:.2px;}
+.topbar .brand small{display:block;font-weight:400;font-size:11px;opacity:.9;letter-spacing:0;}
+.topbar button{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:7px 14px;cursor:pointer;font-family:inherit;font-size:13px;}
+.topbar button:hover{background:rgba(255,255,255,.28);}
+.wrap{padding:34px 40px 56px;}
+.page{display:none;animation:fade .25s ease;}
+.page.active{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+h2{color:var(--purple);font-family:'Comfortaa',sans-serif;font-size:23px;line-height:1.3;margin:6px 0 20px;}
+h4{color:var(--blue);font-family:'Comfortaa',sans-serif;font-size:15px;margin:22px 0 8px;}
+p{margin:0 0 13px;}
+strong{color:var(--purple);}
+ul{margin:0 0 15px;padding-left:0;list-style:none;}
+li{position:relative;padding:4px 0 4px 22px;margin-bottom:2px;}
+li::before{content:'';position:absolute;left:2px;top:13px;width:7px;height:7px;border-radius:50%;background:var(--magenta);}
+li strong{color:var(--dark);}
+.crumb{font-family:'Comfortaa',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--magenta);font-weight:700;margin-bottom:2px;}
+.pagenav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:34px;padding-top:20px;border-top:1px solid var(--border);}
+.btn{padding:10px 22px;border:none;border-radius:6px;cursor:pointer;font-size:14px;font-family:inherit;}
+.btn-magenta{background:var(--magenta);color:#fff;}
+.btn-secondary{background:var(--border);color:var(--dark);}
+.btn-ghost{background:transparent;color:var(--purple);border:1px solid var(--purple);}
+.btn:hover{filter:brightness(1.06);}
+/* process steps */
+.process{margin:8px 0 20px;}
+.step{background:var(--tint);border:1px solid #e7dcee;border-left:4px solid var(--purple);border-radius:8px;padding:12px 16px;font-size:13.5px;box-shadow:0 1px 4px rgba(123,45,142,.06);}
+.step strong{color:var(--purple);}
+.arrow{text-align:center;color:var(--magenta);font-size:22px;line-height:1;margin:5px 0;}
+/* dimension blocks */
+.dim{background:#fff;border:1px solid var(--border);border-left:5px solid var(--dc);border-radius:10px;padding:15px 20px;margin:0 0 15px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.dim strong{color:var(--dc);}
+.dim em{color:var(--gray);font-style:italic;}
+/* cover */
+#cover{text-align:center;padding:70px 30px 60px;}
+#cover .kicker{font-family:'Comfortaa',sans-serif;text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--magenta);font-weight:700;}
+#cover h1{font-family:'Comfortaa',sans-serif;font-weight:700;font-size:34px;line-height:1.25;color:var(--purple);margin:18px auto 14px;max-width:640px;}
+#cover .sub{font-size:16px;color:var(--gray);max-width:560px;margin:0 auto 8px;}
+#cover .inst{font-family:'Comfortaa',sans-serif;font-weight:600;color:var(--dark);margin:26px 0 34px;}
+#cover .rule{width:70px;height:4px;background:linear-gradient(90deg,var(--purple),var(--magenta));border-radius:3px;margin:24px auto;}
+#cover .btn{padding:14px 34px;font-size:15px;font-family:'Comfortaa',sans-serif;font-weight:600;}
+/* index */
+.lead{background:var(--tint);border-left:4px solid var(--purple);padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:26px;}
+.card{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--purple);border-radius:8px;padding:14px 16px;margin-bottom:10px;cursor:pointer;font-family:inherit;transition:.15s;}
+.card:hover{background:var(--tint);transform:translateX(3px);box-shadow:0 3px 10px rgba(123,45,142,.10);}
+.card-num{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-family:'Comfortaa',sans-serif;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.card-txt{flex:1;display:flex;flex-direction:column;}
+.card-txt strong{color:var(--dark);font-size:14px;}
+.card-txt small{color:var(--gray);font-size:12px;}
+.card-arrow{color:var(--magenta);font-size:18px;}
+.foot{text-align:center;color:var(--gray);font-size:11px;padding:20px;border-top:1px solid var(--border);}
+@media(max-width:600px){.wrap{padding:22px 20px 44px;}#cover h1{font-size:26px;}.topbar{padding:12px 20px;}}
+</style></head>
+<body><div class="container">
+  <div class="topbar">
+    <div class="brand">Directrices EPIG<small>Ayuntamiento de Portugalete</small></div>
+    <button onclick="go('index')">&#9776; Índice</button>
+  </div>
+  <div class="wrap">
+
+    <section class="page active" id="cover">
+      <div class="kicker">Ayuntamiento de Portugalete</div>
+      <h1>Directrices municipales para la elaboración y verificación de las evaluaciones previas de impacto de género (EPIG)</h1>
+      <div class="rule"></div>
+      <p class="sub">Guía municipal para elaborar y verificar las evaluaciones previas de impacto de género, en desarrollo del artículo 20 del Decreto Legislativo 1/2023.</p>
+      <div class="inst">Servicio de Igualdad &middot; Red Kuorum &middot; 2026</div>
+      <button class="btn btn-magenta" onclick="go('index')">Entrar &rarr;</button>
+    </section>
+
+    <section class="page" id="index">
+      <div class="crumb">Directrices EPIG</div>
+      <h2>Qué son estas directrices</h2>
+      <div class="lead"><p style="margin:0">Las presentes directrices tienen por objeto establecer cómo se elaboran y verifican en el Ayuntamiento de Portugalete las evaluaciones previas de impacto de género (en adelante, EPIG), en desarrollo del artículo 20 del Decreto Legislativo 1/2023, de 16 de marzo. Son de aplicación a todas las áreas, departamentos y servicios municipales que promuevan disposiciones normativas, planes o actos administrativos, y están redactadas para poder aplicarse sin necesidad de formación especializada en igualdad.</p></div>
+      <h4 style="margin-top:0">Contenidos</h4>
+      <button class="card" onclick="go('s1')">
+  <span class="card-num">1</span>
+  <span class="card-txt"><strong>Fundamento: por qué se evalúa el impacto de género</strong><small>Por qué se evalúa el impacto de género</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s2')">
+  <span class="card-num">2</span>
+  <span class="card-txt"><strong>Concepto y naturaleza de la EPIG</strong><small>Qué es la EPIG</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s3')">
+  <span class="card-num">3</span>
+  <span class="card-txt"><strong>Marco legal, funciones y reparto de responsabilidades</strong><small>Marco legal y responsabilidades</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s4')">
+  <span class="card-num">4</span>
+  <span class="card-txt"><strong>Instrumentos que requieren EPIG y supuestos de exención</strong><small>Qué requiere EPIG y exenciones</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s5')">
+  <span class="card-num">5</span>
+  <span class="card-txt"><strong>Procedimiento</strong><small>El procedimiento</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s6')">
+  <span class="card-num">6</span>
+  <span class="card-txt"><strong>El contenido del análisis: dimensiones de la evaluación completa y cascada de la evaluación simplificada de planes</strong><small>Las dimensiones y la cascada de planes</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s7')">
+  <span class="card-num">7</span>
+  <span class="card-txt"><strong>La evaluación insuficiente</strong><small>La evaluación insuficiente</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s8')">
+  <span class="card-num">8</span>
+  <span class="card-txt"><strong>Preguntas frecuentes</strong><small>Preguntas frecuentes</small></span>
+  <span class="card-arrow">&rarr;</span></button><button class="card" onclick="go('s9')">
+  <span class="card-num">9</span>
+  <span class="card-txt"><strong>Glosario</strong><small>Glosario</small></span>
+  <span class="card-arrow">&rarr;</span></button>
+    </section>
+
+    
+    <section class="page" id="s1">
+      <div class="crumb">6.1.1 &middot; Por qué se evalúa el impacto de género</div>
+      <h2>Fundamento: por qué se evalúa el impacto de género</h2>
+      <p>Las desigualdades entre mujeres y hombres no son naturales ni casuales: se producen y se reproducen a través de la socialización, de la división sexual del trabajo —que atribuye a las mujeres el trabajo de cuidados y sostiene sobre él el resto— y de unas estructuras históricamente pensadas desde la experiencia masculina, tomada como medida de lo neutro (androcentrismo).</p>
+<p>Por ello, la igualdad que exige la ley no es la mera igualdad formal, sino la igualdad real y efectiva. Una norma puede tratar a todas las personas por igual sobre el papel y, aun así, producir efectos distintos en mujeres y hombres, porque unas y otros parten de posiciones desiguales.</p>
+<p>La EPIG es el instrumento que aplica la transversalidad de género a la producción normativa municipal: permite determinar, antes de aprobar una norma, si esta va a aumentar, mantener o reducir las desigualdades, e incorporar a tiempo las medidas necesarias para corregirlas.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('index')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s2')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s2">
+      <div class="crumb">6.1.2 &middot; Qué es la EPIG</div>
+      <h2>Concepto y naturaleza de la EPIG</h2>
+      <p>La EPIG es un instrumento de análisis que permite identificar, antes de su aprobación, las consecuencias que una norma, plan o acto administrativo puede tener sobre la igualdad entre mujeres y hombres, con el fin de integrar la perspectiva de género desde su diseño y no como un trámite posterior.</p>
+<p>La EPIG no es un informe que se redacta una vez cerrada la norma, sino un proceso que acompaña su elaboración desde la planificación. El análisis se inicia cuando se perfilan los objetivos, el alcance y las personas destinatarias: ese es el momento de valorar el impacto potencial de género e incorporar las medidas oportunas.</p>
+<p>El documento que se remite como EPIG es el resultado de ese proceso: recoge el diagnóstico inicial, las medidas efectivamente incorporadas a la norma durante su elaboración y la valoración del impacto que la norma aprobada tendrá sobre la igualdad. Las medidas que figuran en la EPIG son las que la norma ya incorpora, no propuestas pendientes de decisión.</p>
+<p>En ningún caso la EPIG constituye un trámite formal desvinculado del contenido de la norma. Estas directrices persiguen que la perspectiva de género forme parte del diseño de la norma, no únicamente de su expediente.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s1')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s3')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s3">
+      <div class="crumb">6.1.3 &middot; Marco legal y responsabilidades</div>
+      <h2>Marco legal, funciones y reparto de responsabilidades</h2>
+      <p><strong>Obligación legal. </strong>El artículo 20 del Decreto Legislativo 1/2023 obliga a todas las administraciones públicas de la Comunidad Autónoma de Euskadi a evaluar previamente el impacto en función del género de las disposiciones normativas y actos administrativos que aprueben. Su apartado 3 ordena a cada administración aprobar normas o directrices que identifiquen los supuestos exentos, fijen las pautas de evaluación y regulen el resto de trámites. Las presentes directrices dan cumplimiento a ese mandato en el ámbito municipal.</p>
+<p><strong>Elaboración. </strong>La elaboración de la EPIG corresponde al área, departamento o servicio que promueve la norma, por ser quien conoce la materia, dispone de los datos e incorpora las medidas durante su diseño. La responsabilidad de la evaluación recae en el órgano promotor.</p>
+<p><strong>Verificación. </strong>La verificación corresponde al Servicio de Igualdad, que revisa la evaluación elaborada por el órgano promotor, emite observaciones y, en su caso, formula recomendaciones. Su función es de asesoramiento, apoyo y contraste, no de elaboración.</p>
+<p><strong>Fundamento del reparto. </strong>Esta distribución deriva del propio artículo 20 del DL 1/2023, que atribuye la evaluación al órgano que promueve la norma (apartado 1) y reserva la función de informe al organismo de igualdad (apartado 2), que en el ámbito municipal ejerce el Servicio de Igualdad. La separación entre quien elabora y quien verifica preserva el contraste independiente de la evaluación.</p>
+<p><strong>Asesoramiento. </strong>El Servicio de Igualdad presta asesoramiento durante todo el proceso; el órgano promotor puede consultarle en cualquier momento. No procede delegar en él la elaboración de la EPIG.</p>
+<p><strong>Momento. </strong>La EPIG se inicia con la planificación de la norma y se desarrolla en tres momentos: diagnóstico (al inicio, al perfilar objetivos y alcance), incorporación de medidas (durante la elaboración) y documentación del resultado (antes de la aprobación), que se cumplimenta mediante la herramienta descrita en el apartado 6.3.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s2')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s4')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s4">
+      <div class="crumb">6.1.4 &middot; Qué requiere EPIG y exenciones</div>
+      <h2>Instrumentos que requieren EPIG y supuestos de exención</h2>
+      <p><strong>Instrumentos que requieren EPIG por ley (modalidad completa). </strong>De conformidad con el artículo 20 del DL 1/2023, requieren evaluación previa de impacto de género, en su modalidad completa:</p>
+<ul><li>Ordenanzas municipales, fiscales y no fiscales.</li><li>Reglamentos.</li><li>Normas presupuestarias: los presupuestos municipales y sus modificaciones.</li><li>Normas urbanísticas: los planes generales, parciales y especiales de ordenación, sometidos a evaluación por el artículo 20.7 del DL 1/2023.</li><li>Bases reguladoras de subvenciones publicadas en el Boletín Oficial de Bizkaia.</li><li>Convocatorias de oferta pública de empleo y sus bases, generales y específicas.</li><li>Concursos de traslados.</li></ul>
+<p>Los actos administrativos, con carácter general, no están sujetos a EPIG: la ley solo obliga a los dos que se acaban de citar —convocatorias de oferta pública de empleo y concursos de traslados— (art. 20.8 del DL 1/2023).</p>
+<p><strong>Instrumentos que se someten a EPIG por decisión municipal. </strong>Los siguientes instrumentos no tienen naturaleza normativa —son actos administrativos o planes sin fuerza normativa— y la ley no obliga a evaluarlos. El Ayuntamiento de Portugalete decide, no obstante, someterlos a EPIG:</p>
+<ul><li>Convenios.</li><li>Subvenciones nominativas aprobadas mediante decreto.</li><li>Planes estratégicos y sectoriales.</li></ul>
+<p>De ellos, los convenios y las subvenciones nominativas se someten a EPIG en su modalidad completa. Los planes estratégicos y sectoriales, por su lógica de planificación, se someten a una EPIG simplificada, que se describe en el apartado 6.1.6. Los planes urbanísticos y territoriales, en cambio, requieren EPIG completa por ley, según se ha indicado.</p>
+<p>En caso de duda sobre si un instrumento requiere EPIG, el órgano promotor consultará al Servicio de Igualdad.</p>
+<p><strong>Supuestos que pueden acogerse a la exención. </strong>Los siguientes instrumentos pueden acogerse a la exención, previo informe favorable del Servicio de Igualdad conforme al procedimiento del apartado 6.1.5:</p>
+<ul><li>a) Disposiciones de carácter esencialmente organizativo: decretos de estructura orgánica y funcional; creación u organización de órganos consultivos integrados exclusivamente por personal de las administraciones públicas; creación u ordenación de registros administrativos; nombramientos y ceses.</li><li>b) Refundiciones de normas vigentes que ya contaron con EPIG, cuando no supongan innovación normativa sustancial.</li><li>c) Modificaciones menores de normas vigentes que ya contaron con EPIG, cuando la modificación no afecte de manera sustancial a la situación de mujeres y hombres.</li><li>d) Cambios de precios no significativos.</li><li>e) Disposiciones sin relevancia desde el punto de vista de la igualdad de mujeres y hombres.</li></ul>
+<p><strong>Improcedencia de la exención. </strong>No pueden acogerse a la exención las modificaciones o refundiciones de normas cuya versión original no contó con EPIG: en tal caso, la modificación o la refundición es la ocasión para realizar la evaluación que la norma original debió incorporar. Aun en los supuestos de exención, la disposición garantizará el uso no sexista del lenguaje, valorará la incorporación de datos desagregados por sexo y promoverá la participación equilibrada de mujeres y hombres en los órganos que cree o regule.</p>
+<p><strong>Convocatorias anuales de subvenciones. </strong>Las convocatorias anuales, en cuanto actos administrativos dictados al amparo de bases reguladoras ya evaluadas, no requieren EPIG. No obstante, el órgano que las elabore observará las obligaciones del artículo 23 del DL 1/2023 relativas a los contenidos de igualdad que las subvenciones deben incorporar, del mismo modo que quien elabora cualquier otra norma debe conocer la normativa de igualdad aplicable a su ámbito.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s3')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s5')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s5">
+      <div class="crumb">6.1.5 &middot; El procedimiento</div>
+      <h2>Procedimiento</h2>
+      <p><strong>Procedimiento de exención. </strong>Cuando el órgano promotor considere que su disposición puede acogerse a una causa de exención:</p>
+<div class="process"><div class="step">Paso 1. Solicita al Servicio de Igualdad un informe de exención, indicando la causa alegada y su justificación.</div><div class="arrow">&darr;</div><div class="step">Paso 2. El Servicio de Igualdad examina la solicitud y emite informe favorable o desfavorable.</div><div class="arrow">&darr;</div><div class="step">Paso 3. Con informe favorable, el órgano promotor tramita la exención mediante la sección correspondiente de la herramienta. Con informe desfavorable, la disposición se somete a EPIG.</div></div>
+<p>Sin informe favorable del Servicio de Igualdad, ninguna disposición puede acogerse a la exención. Este circuito evita que la decisión sobre la exención recaiga exclusivamente en el órgano promotor.</p>
+<p><strong>Procedimiento de evaluación completa. </strong>Se aplica a las disposiciones normativas y actos administrativos enumerados en el apartado 6.1.4, así como a los planes urbanísticos.</p>
+<p>La evaluación acompaña a la elaboración de la norma y no constituye un trámite posterior a ella. Por eso la cumplimentación del formulario de EPIG no se reserva a un único momento final, sino que se completa a medida que avanza el trabajo: el diagnóstico puede consignarse ya en la fase inicial —no varía sustancialmente entre el comienzo y el final de la norma—, las medidas pueden anotarse conforme se van decidiendo, y solo la valoración del impacto se cierra cuando las decisiones están tomadas. La redacción del informe es, por tanto, un proceso tan vivo como la propia elaboración de la norma.</p>
+<div class="process"><div class="step">Paso 1. Inicio. Al comenzar la planificación de la norma, el órgano promotor comunica al Servicio de Igualdad el inicio de la EPIG y puede solicitar asesoramiento.</div><div class="arrow">&darr;</div><div class="step">Paso 2. Diagnóstico. Analiza la situación de partida recorriendo las cinco dimensiones, con los datos del área, los registros municipales, Eustat y los materiales sectoriales de Emakunde. Este diagnóstico puede consignarse ya en el formulario durante esta fase.</div><div class="arrow">&darr;</div><div class="step">Paso 3. Incorporación de medidas. A partir del diagnóstico, determina las medidas que incorporará al texto de la norma durante su elaboración y las refleja en el formulario conforme las adopta.</div><div class="arrow">&darr;</div><div class="step">Paso 4. Cierre de la documentación. Tomadas las decisiones, completa la valoración del impacto y cierra el formulario mediante la herramienta, que recoge el diagnóstico por dimensión, las medidas incorporadas y la valoración final, y genera un PDF para el expediente y un Excel para la verificación.</div><div class="arrow">&darr;</div><div class="step">Paso 5. Verificación. El Servicio de Igualdad verifica la evaluación mediante su herramienta y emite el informe de verificación con las observaciones pertinentes.</div><div class="arrow">&darr;</div><div class="step">Paso 6. Incorporación al expediente. La EPIG y el informe de verificación se incorporan al expediente de la norma.</div></div>
+<p><strong>Procedimiento de evaluación simplificada de planes. </strong>Los planes sometidos a evaluación simplificada siguen un circuito equivalente —inicio, diagnóstico, incorporación de medidas, documentación y verificación—, si bien el análisis no se organiza por dimensiones, sino conforme a la lógica en cascada propia de la planificación que se describe en el apartado 6.1.6.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s4')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s6')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s6">
+      <div class="crumb">6.1.6 &middot; Las dimensiones y la cascada de planes</div>
+      <h2>El contenido del análisis: dimensiones de la evaluación completa y cascada de la evaluación simplificada de planes</h2>
+      <p>La evaluación se organiza de forma distinta según su modalidad. La evaluación completa recorre cinco dimensiones de análisis; la evaluación simplificada de planes sigue una lógica en cascada ajustada a la estructura de la planificación. Se describen a continuación ambas.</p>
+<h4><strong>A) Las cinco dimensiones de la evaluación completa</strong></h4>
+<p>Para cada dimensión, el formulario solicita un análisis de la situación de partida (diagnóstico), la identificación de las medidas incorporadas a la norma y una valoración de si la norma contribuirá a reducir las desigualdades detectadas.</p>
+<div class="dim" style="--dc:#7B2D8E"><strong>Dimensión 1. Presencia de mujeres y hombres. </strong>Analiza quién está presente en el ámbito que la norma regula, de forma directa e indirecta. Presencia directa: cuántas mujeres y cuántos hombres participan, trabajan, son socias o socios, se benefician o se ven afectados por lo que la norma regula. Presencia indirecta: personas beneficiarias de servicios, familias atendidas, personal de empresas contratadas o colectivos que se benefician de las actividades subvencionadas. Los datos se desagregarán por sexo siempre que sea posible y, cuando proceda, también por edad, origen y otros factores de diversidad que permitan detectar situaciones de discriminación múltiple. <em>Ejemplo:</em> al regular el servicio de ayuda a domicilio, se analiza la distribución por sexo de las personas beneficiarias, de las personas cuidadoras informales, de la plantilla municipal que gestiona el servicio y del personal de las empresas contratadas.</div>
+<div class="dim" style="--dc:#115685"><strong>Dimensión 2. Participación en la toma de decisiones. </strong>Analiza quién decide. No se refiere a la participación en sentido genérico, sino a quién forma parte de los procesos de decisión del ámbito regulado: juntas directivas, tribunales de selección, comisiones evaluadoras, órganos consultivos, comités de adjudicación o jurados. Interesa si la composición de esos órganos es equilibrada, si la norma prevé mecanismos para garantizar la paridad y quién participa en la elaboración y ejecución de la norma. <em>Ejemplo:</em> al regular una oferta pública de empleo, se analiza la composición de los tribunales de selección y si se garantiza la paridad conforme al artículo 21 del DL 1/2023.</div>
+<div class="dim" style="--dc:#C62270"><strong>Dimensión 3. Acceso y uso de los recursos. </strong>Analiza cómo se distribuyen los recursos, en sentido amplio, entre mujeres y hombres: dinero (presupuesto, subvenciones, retribuciones, becas, tarifas), tiempo (horarios, jornadas, plazos), espacios (salas, instalaciones, sedes, su ubicación y accesibilidad), infraestructuras, transporte, formación e información. Interesa si las condiciones de acceso generan barreras diferenciadas, si horarios, plazos o requisitos tienen en cuenta las responsabilidades de cuidados, si los espacios son accesibles y están bien ubicados, y si la información llega por canales accesibles para todo tipo de mujeres. <em>Ejemplo:</em> al regular el transporte público municipal, un análisis de recursos en sentido amplio no se limita al servicio en sí, sino que examina quién depende de él y con qué recursos cuentan esas personas para desplazarse de otro modo —en mayor proporción dependen del transporte público las mujeres, que disponen de menos vehículo propio y de menor renta—; cómo les afectan las diferencias de tarifas (el recurso dinero); si los horarios se ajustan a sus desplazamientos reales (el recurso tiempo); qué necesidades de transporte derivan de sus funciones sociales, señaladamente los desplazamientos ligados a los cuidados —acompañar a menores, a personas mayores o dependientes, encadenar trayectos cortos y no pendulares—; si las rutas, la frecuencia y la ubicación de las paradas conectan bien con los espacios asociados a esos cuidados (centros escolares, de salud, mercados), que recaen mayoritariamente sobre las mujeres; y si la información del servicio llega y resulta accesible y legible para todo tipo de mujeres, por ejemplo mujeres racializadas o migrantes que pueden encontrar barreras de idioma, y mujeres con discapacidad auditiva o visual. Ese conjunto —dinero, tiempo, necesidades derivadas de los roles de cuidado, accesibilidad física y accesibilidad de la información— es lo que integra el análisis de los recursos.</div>
+<div class="dim" style="--dc:#D85A30"><strong>Dimensión 4. Normas sociales, roles y estereotipos de género. </strong>Analiza cómo influyen los roles y estereotipos de género en el ámbito regulado: si la norma reproduce o cuestiona la división sexual del trabajo, si sus requisitos refuerzan roles tradicionales, si tiene en cuenta que las responsabilidades de cuidados recaen mayoritariamente en las mujeres —condicionando su tiempo, participación y acceso al empleo—, si el lenguaje es inclusivo y no sexista, y si las imágenes o contenidos perpetúan estereotipos. <em>Ejemplo:</em> al regular una ordenanza de publicidad exterior, se analiza si se exige que los contenidos no sean sexistas; al regular actividades extraescolares, si la oferta reproduce la segregación de género o promueve la coeducación.</div>
+<div class="dim" style="--dc:#2F8F7F"><strong>Dimensión 5. Igualdad en la normativa. </strong>Verifica si la norma cumple los mandatos legales de igualdad aplicables a su ámbito: el DL 1/2023, la LO 3/2007, la Norma Foral 4/2018, el Decreto Foral 112/2024 de Bizkaia, la Estrategia 2030 para la Igualdad de Portugalete y la normativa sectorial pertinente. Interesa si la norma cita y aplica esa legislación. En subvenciones, si cumple el artículo 23 (prohibición de concurrir a entidades sancionadas, baremación con criterios de igualdad, condiciones de ejecución y datos desagregados); en empleo público, si cumple el artículo 21 (prioridad en caso de infrarrepresentación, composición equilibrada de tribunales y baremos de conciliación). <em>Ejemplo:</em> al regular las bases de una subvención, se verifica que incluyan la prohibición de concurrir a entidades sancionadas, criterios de baremación vinculados a la igualdad, condiciones especiales de ejecución y exigencia de datos desagregados por sexo.</div>
+<h4><strong>B) La evaluación simplificada de planes: la lógica en cascada</strong></h4>
+<p><strong>Finalidad. </strong>Esta modalidad verifica que el plan incorpora la perspectiva de género conforme al estándar «Perspectiva de género en planes sectoriales y transversales» de los Estándares de Calidad de las Políticas Públicas de Igualdad (Acuerdo de 12 de diciembre de 2018 de la Comisión Interinstitucional para la Igualdad de Mujeres y Hombres): datos desagregados y análisis de brechas en el diagnóstico, objetivos de igualdad, medidas, indicadores de seguimiento y participación de la unidad o el personal técnico de igualdad en el diseño y en la evaluación del plan.</p>
+<p><strong>La cascada. </strong>El análisis sigue un circuito encadenado que reproduce el recorrido de un plan y permite identificar en qué punto se interrumpe. En cada paso se constata, además, en cuántos de los ejes o ámbitos del plan se cumple, porque no es lo mismo integrar la igualdad en todos los ejes que hacerlo de forma puntual:</p>
+<div class="process"><div class="step">Paso 1. Datos desagregados por sexo en el diagnóstico. ¿Recoge el diagnóstico datos desagregados por sexo, y en cuántos de los ejes del plan?</div><div class="arrow">&darr;</div><div class="step">Paso 2. Identificación de brechas. A partir de esos datos, ¿se identifican brechas o desigualdades entre mujeres y hombres, y en cuántos de los ejes con datos? (Disponer de datos no equivale a analizarlos.)</div><div class="arrow">&darr;</div><div class="step">Paso 3. Objetivos de subsanación. Para las brechas identificadas, ¿formula el plan objetivos dirigidos a corregirlas? (Es el punto donde el circuito se rompe con más frecuencia.)</div><div class="arrow">&darr;</div><div class="step">Paso 4. Medidas concretas. Para esos objetivos, ¿se proponen medidas o acciones concretas y verificables —con persona responsable— y no meras declaraciones genéricas?</div><div class="arrow">&darr;</div><div class="step">Paso 5. Indicadores de seguimiento. Para esas medidas, ¿se definen indicadores desagregados por sexo que permitan comprobar si la brecha se está cerrando?</div></div>
+<p>El circuito completo encadena diagnóstico desagregado → brecha → objetivo → medida → indicador. Identificar en qué paso se interrumpe orienta la mejora mejor que una simple valoración de cumplimiento o incumplimiento.</p>
+<p><strong>Cuestiones transversales. </strong>Con independencia de la cascada, la evaluación simplificada verifica: el uso no sexista del lenguaje en todo el documento; la cita del marco normativo (DL 1/2023 y Estrategia 2030 para la Igualdad de Portugalete); la consulta y la participación del Servicio de Igualdad tanto durante la elaboración como en las estructuras de gestión y seguimiento del plan; la intervención de asesoramiento experto y la formación en igualdad del personal durante el proceso; y la participación equilibrada de mujeres y hombres en el proceso participativo, en los órganos del plan y en sus espacios de toma de decisiones.</p>
+<p><strong>Herramienta. </strong>La evaluación simplificada de planes se cumplimenta mediante la herramienta digital de evaluación, que incorpora esta cascada y sus cuestiones transversales. La herramienta se incorpora al espacio de apoyo con los materiales de la EPIG; su ubicación y difusión se detallan en el apartado 6.2.</p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s5')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s7')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s7">
+      <div class="crumb">6.1.7 &middot; La evaluación insuficiente</div>
+      <h2>La evaluación insuficiente</h2>
+      <p>Cuando el Servicio de Igualdad aprecie que una EPIG es insuficiente —porque no se han abordado las dimensiones pertinentes, porque el diagnóstico carece de datos, o porque no se han incorporado medidas pese a haberse identificado desigualdades—, el informe de verificación recogerá las observaciones y recomendaciones correspondientes, que quedarán incorporadas al expediente como constancia del criterio técnico del Servicio de Igualdad. Esta constancia no comporta, por sí misma, la obligación del órgano promotor de modificar la norma: la verificación tiene carácter de asesoramiento y contraste, no vinculante.</p>
+<p>No obstante, el órgano promotor atenderá preferentemente las observaciones del Servicio de Igualdad e incorporará las mejoras procedentes. La verificación opera así como instrumento de mejora progresiva de la calidad de las evaluaciones en el conjunto de la organización municipal.</p>
+<p><strong><em>Marco normativo de referencia. </em></strong><em>DL 1/2023, de 16 de marzo (arts. 20, 21, 22 y 23); LO 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres; Norma Foral 4/2018, de 20 de junio, para la Igualdad de Mujeres y Hombres en Bizkaia; Decreto Foral 112/2024, de 17 de septiembre, de la Diputación Foral de Bizkaia; y la Estrategia 2030 para la Igualdad de Portugalete.</em></p>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s6')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s8')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s8">
+      <div class="crumb">6.1.8 &middot; Preguntas frecuentes</div>
+      <h2>Preguntas frecuentes</h2>
+      <ul><li><strong>¿Qué instrumentos requieren EPIG? </strong>La ley (art. 20 del DL 1/2023) somete a evaluación las disposiciones normativas que el Ayuntamiento elabora. Los actos administrativos, en cambio, no están sujetos, salvo dos que la ley nombra de forma expresa: las convocatorias de oferta pública de empleo y los concursos de traslados (art. 20.8). Además, los planes con naturaleza de disposición de carácter general —en particular los urbanísticos y territoriales— se someten a evaluación (art. 20.7). A este alcance legal, estas directrices añaden, por decisión municipal, los convenios y las subvenciones nominativas aprobados por decreto y, en su modalidad simplificada, los planes estratégicos y sectoriales. La relación concreta figura en el apartado 6.1.4; en caso de duda, se utilizará la verificación de aplicabilidad de la herramienta o se consultará al Servicio de Igualdad.</li><li><strong>¿La EPIG se realiza al final, con la norma ya redactada? </strong>No. Se realiza desde el inicio: el diagnóstico al principio y las medidas durante el diseño. La EPIG documenta un proceso de integración, no es una auditoría final.</li><li><strong>¿Qué medidas se consignan en el formulario? </strong>Únicamente las que la norma ya incorpora. Si una medida se valoró y se descartó, la decisión se justifica en el cuerpo de la evaluación para que quede constancia, pero no se consigna como incorporada.</li><li><strong>¿Y si no se dispone de datos desagregados por sexo? </strong>La ausencia de datos propios no exime del análisis. Cuando no existan datos del ámbito concreto que la norma regula, se recurrirá a los del nivel más cercano disponible —de Portugalete, de la Comunidad Autónoma de Euskadi, del Estado o del ámbito europeo—; casi siempre existe algún diagnóstico de referencia, más o menos cercano y más o menos útil. Además, la inexistencia de datos es en sí misma un hallazgo relevante: se dejará constancia y, en lo posible, se propondrá comenzar a recogerlos.</li><li><strong>¿Y si en el ámbito no existe ninguna brecha? </strong>Es posible, pero debe demostrarse con datos, no presuponerse. La mayoría de ámbitos aparentemente neutros dejan de serlo al analizarlos con datos desagregados.</li><li><strong>¿Los planes llevan EPIG? </strong>Los planes con naturaleza normativa —en particular los urbanísticos y territoriales— se someten a EPIG completa, conforme al artículo 20.7 del DL 1/2023. Los planes estratégicos y sectoriales, que no tienen naturaleza normativa, se someten por decisión municipal a la evaluación simplificada de planes descrita en el apartado 6.1.6.</li><li><strong>¿Quién elabora la EPIG y quién la verifica? </strong>La elabora el órgano que promueve la norma. El Servicio de Igualdad asesora, apoya y verifica; no le corresponde elaborarla en lugar del órgano promotor.</li><li><strong>¿Quién decide si una norma puede acogerse a una exención? </strong>No la decide el órgano promotor por sí solo. Antes de acogerse a una exención debe solicitarse al Servicio de Igualdad un informe favorable previo; solo con ese informe la norma queda exenta.</li><li><strong>Las bases reguladoras de una subvención y la convocatoria anual, ¿son lo mismo a efectos de EPIG? </strong>No. Las bases reguladoras publicadas en el Boletín Oficial de Bizkaia llevan EPIG. Las convocatorias anuales dictadas a su amparo no, pero deben respetar las obligaciones de igualdad del artículo 23.</li></ul>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s7')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <button class="btn btn-magenta" onclick="go('s9')">Siguiente &rarr;</button>
+      </div>
+    </section>
+    <section class="page" id="s9">
+      <div class="crumb">6.1.9 &middot; Glosario</div>
+      <h2>Glosario</h2>
+      <ul><li><strong>Acción positiva: </strong>medidas específicas y temporales dirigidas a compensar la situación de desventaja de las mujeres y a acelerar la igualdad real.</li><li><strong>Androcentrismo: </strong>tomar la experiencia, las necesidades y el punto de vista masculinos como medida de lo universal o neutro.</li><li><strong>Brecha de género: </strong>diferencia entre mujeres y hombres en el acceso a un recurso, en la participación o en los resultados de una política.</li><li><strong>Datos desagregados por sexo: </strong>datos recogidos y presentados de forma separada para mujeres y para hombres, que permiten ver las diferencias entre ambos.</li><li><strong>Disposición de carácter general: </strong>norma jurídica de rango reglamentario, dictada por la Administración, que innova el ordenamiento y se dirige a una pluralidad indeterminada de personas (por ejemplo, ordenanzas y reglamentos, así como las bases reguladoras de subvenciones publicadas en el BOB). Entre los planes, solo tienen esta naturaleza los que la ley reconoce como tales —en particular los territoriales y urbanísticos (art. 20.7 del DL 1/2023)—; los planes estratégicos y sectoriales no son disposiciones de carácter general, aunque estas directrices los sometan a la evaluación simplificada.</li><li><strong>División sexual del trabajo: </strong>reparto desigual, según el sexo, del trabajo productivo (remunerado) y del trabajo reproductivo y de cuidados (no remunerado).</li><li><strong>EPIG: </strong>evaluación previa de impacto de género; análisis que anticipa los efectos de una norma sobre la situación de mujeres y hombres antes de aprobarla.</li><li><strong>Evaluación simplificada de planes: </strong>modalidad de EPIG aplicable a los planes estratégicos y sectoriales, que analiza mediante una lógica en cascada (datos desagregados → brechas → objetivos → medidas → indicadores) la integración de la igualdad en el plan.</li><li><strong>Igualdad formal e igualdad real y efectiva: </strong>la primera es la igualdad ante la ley; la segunda es la igualdad en las condiciones, oportunidades y resultados, que es la que la ley persigue.</li><li><strong>Transversalidad (mainstreaming de género): </strong>integración de la perspectiva de género en todas las fases y ámbitos de las políticas públicas, no solo en medidas específicas.</li><li><strong>Normas sociales de género: </strong>creencias, valores y expectativas sobre lo que se atribuye a mujeres y a hombres, que condicionan sus comportamientos y oportunidades.</li><li><strong>Perspectiva de género: </strong>forma de analizar la realidad que tiene en cuenta las relaciones y las desigualdades entre mujeres y hombres.</li><li><strong>Segregación horizontal y vertical: </strong>la horizontal es la concentración de mujeres y hombres en distintos sectores o actividades; la vertical es la menor presencia de mujeres en los niveles de decisión.</li></ul>
+      <div class="pagenav">
+        <button class="btn btn-secondary" onclick="go('s8')">&larr; Anterior</button>
+        <button class="btn btn-ghost" onclick="go('index')">Índice</button>
+        <span></span>
+      </div>
+    </section>
+
+  </div>
+  <div class="foot">Directrices municipales para la EPIG &middot; Ayuntamiento de Portugalete &middot; documento de apoyo</div>
+</div>
+<script>
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  var el=document.getElementById(id); if(el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('keydown',function(e){
+  var cur=document.querySelector('.page.active'); if(!cur) return;
+  var nb=cur.querySelector('.btn-magenta'); var pb=cur.querySelector('.btn-secondary');
+  if(e.key==='ArrowRight'&&nb&&nb.getAttribute('onclick')&&nb.getAttribute('onclick').includes("go('s")) nb.click();
+  if(e.key==='ArrowLeft'&&pb&&pb.getAttribute('onclick')) pb.click();
+});
+</script>
+</body></html>
