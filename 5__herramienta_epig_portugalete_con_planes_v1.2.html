@@ -124,6 +124,7 @@ td { padding: 6px 8px; border-bottom: 1px solid #e2e8f0; }
 .normcat-sub:first-child{border-top:none;margin-top:2px;padding-top:0}
 
 body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offset:3px} #validation-errors ul{padding-left:22px} @media(max-width:600px){.header{padding:18px}.section{padding:18px}.btn-row{gap:8px}.btn{max-width:100%}}
+@media(max-width:600px){body{padding-bottom:16px}.draft-toolbar{position:static!important;margin:16px 12px;justify-content:center}.draft-toolbar button{font-size:11px!important;padding:7px 8px!important;line-height:1.2}}
 </style>
 </head>
 <body>
@@ -491,7 +492,7 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
     <img src="data:image/png;base64,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" alt="Red Kuorum" style="height:32px">
   </div>
   <p data-t="footerText">Herramienta realizada con la asistencia técnica de Red Kuorum, S.L. para el Ayuntamiento de Portugalete, en el marco del proyecto de asesoramiento a la estrategia de implantación del mainstreaming de género en Portugalete, 2026.</p>
-  <p style="font-size:10px;opacity:.55">Herramienta EPIG · v1.3 · septiembre 2026</p>
+  <p style="font-size:10px;opacity:.55">Herramienta EPIG · v1.4 · septiembre 2026</p>
 </div>
 </div>
 <script>
@@ -1262,7 +1263,7 @@ function buildSummary() {
 }
 
 // ===== EXCEL =====
-const APP_VERSION = "Herramienta EPIG Portugalete · v1.3 · septiembre 2026";
+const APP_VERSION = "Herramienta EPIG Portugalete · v1.4 · septiembre 2026";
 
 // Convierte los códigos internos en etiquetas legibles en el idioma activo
 function codeLabel(kind, code) {
@@ -1503,7 +1504,32 @@ function buildReportHTML(forWord) {
     th{background:#F5F0F7;color:#7B2D8E}
     .ft{border-top:1px solid #D9B3E3;padding:12px 0;margin-top:40px;font-size:8pt;color:#555;text-align:center}
     @media print{body{margin:20px}.hdr{margin:-20px -20px 20px -20px}}
-    </style></head><body>`;
+    
+@page{size:A4;margin:18mm}
+@page WordSection1{size:595.3pt 841.9pt;margin:51pt 51pt 51pt 51pt}
+div.WordSection1{page:WordSection1}
+html,body{margin:0;padding:0}
+body{font-size:10.5pt;line-height:1.25}
+p{margin:0 0 6pt;orphans:3;widows:3}
+h1,h2,h3,h4{page-break-after:avoid;break-after:avoid;mso-pagination:widow-orphan}
+h2{margin:10pt 0 6pt;font-size:12pt}
+h3{margin:8pt 0 4pt;font-size:10.5pt}
+.f{margin:3pt 0}
+.dim-section{margin:4pt 0 6pt;padding:5pt;page-break-inside:avoid;break-inside:avoid}
+table{width:100%;table-layout:fixed;margin:5pt 0;border-collapse:collapse}
+td,th{padding:3pt 5pt;font-size:9pt;line-height:1.2;overflow-wrap:anywhere;word-wrap:break-word;vertical-align:top}
+td p,th p{margin:0}
+tr{page-break-inside:avoid;break-inside:avoid}
+thead{display:table-header-group}
+thead tr,th,th p{page-break-after:avoid;break-after:avoid}
+.narrative{padding:5pt;margin:4pt 0;line-height:1.25;font-size:10pt;page-break-inside:avoid;break-inside:avoid}
+.dim-label{font-size:10pt;font-weight:bold;margin:0 0 3pt;page-break-after:avoid;break-after:avoid}
+.report-conclusion{page-break-inside:avoid;break-inside:avoid}
+.ft{margin-top:14pt;padding:8pt 0;font-size:8pt;line-height:1.2;page-break-inside:avoid;break-inside:avoid}
+.decision{page-break-inside:avoid;break-inside:avoid}
+@media print{body{margin:0}.hdr{margin:0 0 14pt;padding:12pt 16pt}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+</style></head><body><div class="WordSection1">`;
 
   if(forWord) {
     h += `<h1 style="color:#7B2D8E;font-size:16pt;border-bottom:3px solid #7B2D8E;padding-bottom:8px;margin-bottom:4px">${L.reportH1}</h1>`;
@@ -1603,9 +1629,16 @@ function buildReportHTML(forWord) {
   h += `<h2>${(isExemptDoc||isPlanDoc) ? "3" : "5"}. ${L.sResult}</h2>`;
   h += `<div class="f" style="padding:12px;border:2px solid ${r("result")==="POS"?"#38a169":"#e53e3e"};border-radius:6px;font-weight:bold;font-size:12pt;color:${r("result")==="POS"?"#38a169":"#e53e3e"}">${resultLabels[r("result")]||L.noResult}</div>`;
   h += `<div class="f"><span class="lb">${L.justif}</span><br>${v("f-result-just").replace(/\n/g,"<br>") || "<em>"+L.noJustif+"</em>"}</div>`;
-  h += `<div class="f" style="margin-top:40px;padding-top:16px;border-top:2px solid #D9B3E3"><span class="lb">${L.signatory}</span> ${v("f-signatory") || ""}</div>`;
+  h += `<div class="f" style="margin-top:18px;padding-top:10px;border-top:2px solid #D9B3E3"><span class="lb">${L.signatory}</span> ${v("f-signatory") || ""}</div>`;
   h += `<div class="ft">${t("footerText")}<br><span style="opacity:.6;font-size:7.5pt">${APP_VERSION}</span></div>`;
-  h += `</body></html>`;
+  h += `</div></body></html>`;
+  h=h.replace(/<table([^>]*)>([\s\S]*?)<\/table>/g,(whole,attrs,body)=>{
+    if(!/^<tr><th/.test(body))return whole;
+    const end=body.indexOf('</tr>')+5;
+    return '<table'+attrs+'><thead>'+body.slice(0,end)+'</thead><tbody>'+body.slice(end)+'</tbody></table>';
+  });
+  const conclusionStart=h.lastIndexOf('<h2>'),footStart=h.indexOf('<div class="ft">');
+  if(conclusionStart>=0 && footStart>conclusionStart)h=h.slice(0,conclusionStart)+'<div class="report-conclusion">'+h.slice(conclusionStart,footStart)+'</div>'+h.slice(footStart);
   return h;
 }
 
@@ -1880,11 +1913,11 @@ document.addEventListener("change", function() {
 window.addEventListener("pagehide", autoSave);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden") autoSave();});
 // Auto-load on page load (after a short delay for DOM to settle)
-setTimeout(autoLoad, 500);
+document.addEventListener("DOMContentLoaded",autoLoad,{once:true});
 
 </script>
 
-<div style="position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;gap:8px;flex-wrap:wrap">
+<div class="draft-toolbar" style="position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;gap:8px;flex-wrap:wrap">
   <button onclick="saveDraftJSON()" style="background:#115685;color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.2)" title="Descargar un archivo JSON con el borrador actual">💾 Guardar borrador</button>
   <button onclick="loadDraftJSON()" style="background:#6B2D8E;color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.2)" title="Cargar un borrador guardado previamente">📂 Cargar borrador</button>
   <button onclick="clearDraft()" style="background:#c62828;color:#fff;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.2)" title="Borrar todo y empezar de cero">🗑 Nuevo</button>
