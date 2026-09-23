@@ -1,0 +1,80 @@
+{
+  "_format": "epig-portugalete-borrador",
+  "_version": 2,
+  "_lang": "es",
+  "_radios": {
+    "instr": "norma",
+    "normcat": "subv",
+    "result": "POS",
+    "gap-d1": "si",
+    "prev-d1": "si",
+    "gap-d3": "si",
+    "prev-d3": "si"
+  },
+  "f-denom": "Bases reguladoras de las ayudas a personas adultas para el aprendizaje del euskera (reintegro de parte del precio de los estudios a personas empadronadas en Portugalete).",
+  "f-area": "Servicio de Euskera (informe original emitido por la Técnica de Igualdad a su solicitud).",
+  "f-resp": "Servicio de Euskera (órgano promotor).",
+  "f-obj": "Reintegrar parte del coste de los estudios de euskera a las personas adultas del municipio.\n\nConsignación presupuestaria: A consignar (no figura en la documentación disponible).",
+  "f-obj-eq": "Reconocer la incidencia feminizada de la ayuda y actuar sobre la brecha económica de acceso mediante acción positiva, modulación por renta y anticipo del pago, cumpliendo las obligaciones del art. 23.",
+  "f-budget": "",
+  "f-normname": "",
+  "f-exempt-just": "",
+  "f-d1-diag": "El público destinatario está claramente feminizado. En el curso 2019-2020 el 66,13 % del alumnado matriculado en los euskaltegis de la Comunidad Autónoma eran mujeres y el 33,52 % hombres, con una edad media de 38,77 años. Es un patrón sostenido: en el curso 2013-2014, de las 32.217 personas que aprendieron o mejoraron su euskera, el 66,6 % fueron mujeres. La educación de personas adultas y las enseñanzas de idiomas son, además, áreas feminizadas (mapa sectorial de Educación de Emakunde), y los propios decretos de concesión de estas ayudas muestran que las personas beneficiarias son mayoritariamente mujeres.",
+  "f-d1-expl": "Contribuye porque las bases reconocen la incidencia diferenciada por sexo y recogen datos desagregados de solicitantes y beneficiarias (sexo, edad, situación socioeconómica y procedencia), que permiten conocer el perfil de la ayuda y evaluar su efecto distributivo.",
+  "f-d2-diag": "Esta dimensión no es pertinente: la norma no crea ni regula ningún órgano de decisión ni mecanismo de participación, y su público destinatario son personas individuales, no entidades.",
+  "f-d2-expl": "Dimensión no pertinente para esta norma.",
+  "f-d3-diag": "Es la dimensión pertinente, en su vertiente económica, porque la norma decide cuánto se reintegra y cómo. Las mujeres disponen de menos renta —brecha salarial del 17,9 % en Euskadi, de media 5.914 € menos al año—, y la propia Ley para la Igualdad reconoce la mayor incidencia de la pobreza y la exclusión social en las mujeres (art. 49 del DL 1/2023). La ayuda opera como reintegro posterior y cubre solo una parte del coste, y su cuantía es uniforme, sin atender a la distinta capacidad económica de las solicitantes.",
+  "f-d3-expl": "Contribuye porque las bases articulan una acción positiva —mayor porcentaje de reintegro o cuantía superior para las mujeres en situación de vulnerabilidad (riesgo o exclusión social, monomarentalidad, migración o diversidad funcional)— y modulan la cuantía según la renta anticipando el pago, de modo que no queda fuera quien no puede adelantar el coste.",
+  "f-d4-diag": "Esta dimensión no es pertinente: la norma se limita a reintegrar parte del precio del curso; no organiza la formación ni incide en roles, estereotipos o representaciones.",
+  "f-d4-expl": "Dimensión no pertinente para esta norma.",
+  "f-legal-expl": "Grupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Cláusula expresa de exclusión de personas o entidades sancionadas por discriminación por razón de sexo — Bases, arts. 3 y 5 (requisitos y declaración responsable) | art. 23.2 DL 1/2023\n\nGrupo A · Integración de la perspectiva de género | Condición especial de ejecución vinculada a la igualdad | Bases (art. 23.3.c DL 1/2023)\n\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023\n\nCumple el artículo 23: incorpora una cláusula expresa de exclusión de entidades y personas sancionadas por discriminación por razón de sexo (23.2), una condición especial de ejecución vinculada a la igualdad (23.3.c), los datos desagregados (art. 17) y el uso no sexista del lenguaje (art. 19.4) en toda la redacción de las bases.",
+  "plan-s1-a": "",
+  "plan-s1-b": "",
+  "plan-s1-expl": "",
+  "plan-s2-a": "",
+  "plan-s2-b": "",
+  "plan-s2-expl": "",
+  "plan-s3-a": "",
+  "plan-s3-b": "",
+  "plan-s3-expl": "",
+  "plan-s4-a": "",
+  "plan-s4-b": "",
+  "plan-s4-expl": "",
+  "plan-s5-a": "",
+  "plan-s5-b": "",
+  "plan-s5-expl": "",
+  "f-result-just": "El ámbito es pertinente y el diagnóstico identifica una incidencia claramente feminizada y una brecha económica de acceso. La norma incorpora, dentro de su objeto, una acción positiva que otorga mayor cuantía a las mujeres en situación de vulnerabilidad, la modulación por renta y el anticipo del pago, junto con los datos desagregados, la cláusula de exclusión del art. 23.2, una condición de ejecución de igualdad y el uso no sexista del lenguaje. Cumple así de forma completa el artículo 23 y actúa sobre la brecha detectada: el resultado es positivo.",
+  "f-signatory": "[Órgano promotor — Servicio de Euskera] · fecha.",
+  "_selectedMeasures": {
+    "d1_G_2": {
+      "dim": "d1",
+      "group": "G",
+      "oi": 2,
+      "article": "Recogida y publicación de datos desagregados de solicitantes y beneficiarias (sexo, edad, situación socioeconómica y procedencia) — Bases, art. 9 (instrucción) — art. 17 DL 1/2023"
+    },
+    "d3_C_0": {
+      "dim": "d3",
+      "group": "C",
+      "oi": 0,
+      "article": "Acción positiva: mayor cuantía o porcentaje de reintegro para mujeres en situación de vulnerabilidad (discriminación múltiple, art. 3.1) — Bases, art. 8 (cuantía de la subvención) — art. 23.1 DL 1/2023"
+    },
+    "d3_D_3": {
+      "dim": "d3",
+      "group": "D",
+      "oi": 3,
+      "article": "Modulación de la cuantía según la renta y anticipo del pago — Bases, art. 8 (cuantía de la subvención)"
+    }
+  },
+  "_checkedMandates": {
+    "A4": true,
+    "A6": true,
+    "A8": true
+  },
+  "_fuente": {
+    "documento": "6__Capitulo_7_Dossieres_MODELO_positivo_v3.docx",
+    "tipo": "Dossier modelo didáctico; no es el expediente real",
+    "titulo": "EUSKERA · EXPEDIENTE N.º 5: AYUDAS A PERSONAS ADULTAS PARA EL APRENDIZAJE DEL EUSKERA",
+    "texto_completo": "EUSKERA · EXPEDIENTE N.º 5: AYUDAS A PERSONAS ADULTAS PARA EL APRENDIZAJE DEL EUSKERA\nBases reguladoras de las ayudas a personas adultas para el aprendizaje del euskera\nDossier modelo · ejemplo de EPIG bien integradaEjemplo demostrativo del formulario: las medidas se presentan como incorporadas a la norma para ilustrar una evaluación con resultado positivo. No reproduce el contenido literal del expediente real (véase la nota final).\nInforme de evaluación previa de impacto de género\nBases reguladoras de las ayudas a personas adultas para el aprendizaje del euskera (reintegro de parte del precio de los estudios a personas empadronadas en Portugalete).\n1. Datos del proyecto\nDenominación: Bases reguladoras de las ayudas a personas adultas para el aprendizaje del euskera (reintegro de parte del precio de los estudios a personas empadronadas en Portugalete).\nÁrea/Departamento: Servicio de Euskera (informe original emitido por la Técnica de Igualdad a su solicitud).\nPersona responsable: Servicio de Euskera (órgano promotor).\nObjetivos del proyecto: Reintegrar parte del coste de los estudios de euskera a las personas adultas del municipio.\nObjetivos de igualdad: Reconocer la incidencia feminizada de la ayuda y actuar sobre la brecha económica de acceso mediante acción positiva, modulación por renta y anticipo del pago, cumpliendo las obligaciones del art. 23.\nConsignación presupuestaria: A consignar (no figura en la documentación disponible).\nTipo de norma: Bases reguladoras de subvenciones aprobadas por el Pleno (27 de marzo y 30 de abril de 2025) y publicadas en el BOB → disposición de carácter general.\nVerificación de aplicabilidad\nLas bases reguladoras, aprobadas por el Pleno y publicadas en el BOB, son una disposición de carácter general y requieren evaluación previa de impacto de género (art. 20). La evaluación se realiza de forma completa durante la elaboración de las bases, con el régimen de subvenciones del art. 23 como referencia.\n2. Análisis del impacto en función del género\nPresencia de mujeres y hombres\nDiagnóstico de situación: El público destinatario está claramente feminizado. En el curso 2019-2020 el 66,13 % del alumnado matriculado en los euskaltegis de la Comunidad Autónoma eran mujeres y el 33,52 % hombres, con una edad media de 38,77 años. Es un patrón sostenido: en el curso 2013-2014, de las 32.217 personas que aprendieron o mejoraron su euskera, el 66,6 % fueron mujeres. La educación de personas adultas y las enseñanzas de idiomas son, además, áreas feminizadas (mapa sectorial de Educación de Emakunde), y los propios decretos de concesión de estas ayudas muestran que las personas beneficiarias son mayoritariamente mujeres.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque las bases reconocen la incidencia diferenciada por sexo y recogen datos desagregados de solicitantes y beneficiarias (sexo, edad, situación socioeconómica y procedencia), que permiten conocer el perfil de la ayuda y evaluar su efecto distributivo.\nGrupo | Medida | Artículo\nGrupo G · Complementarias · Estadísticas | Recogida y publicación de datos desagregados de solicitantes y beneficiarias (sexo, edad, situación socioeconómica y procedencia) — Bases, art. 9 (instrucción) | art. 17 DL 1/2023\n\nParticipación en la toma de decisiones\nDiagnóstico de situación: Esta dimensión no es pertinente: la norma no crea ni regula ningún órgano de decisión ni mecanismo de participación, y su público destinatario son personas individuales, no entidades.\nDimensión no pertinente para esta norma.\nAcceso y uso de los recursos\nDiagnóstico de situación: Es la dimensión pertinente, en su vertiente económica, porque la norma decide cuánto se reintegra y cómo. Las mujeres disponen de menos renta —brecha salarial del 17,9 % en Euskadi, de media 5.914 € menos al año—, y la propia Ley para la Igualdad reconoce la mayor incidencia de la pobreza y la exclusión social en las mujeres (art. 49 del DL 1/2023). La ayuda opera como reintegro posterior y cubre solo una parte del coste, y su cuantía es uniforme, sin atender a la distinta capacidad económica de las solicitantes.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque las bases articulan una acción positiva —mayor porcentaje de reintegro o cuantía superior para las mujeres en situación de vulnerabilidad (riesgo o exclusión social, monomarentalidad, migración o diversidad funcional)— y modulan la cuantía según la renta anticipando el pago, de modo que no queda fuera quien no puede adelantar el coste.\nGrupo | Medida | Artículo\nGrupo C · Acción positiva para las mujeres | Acción positiva: mayor cuantía o porcentaje de reintegro para mujeres en situación de vulnerabilidad (discriminación múltiple, art. 3.1) — Bases, art. 8 (cuantía de la subvención) | art. 23.1 DL 1/2023\nGrupo D · Medidas neutras con impacto positivo · Nivel de renta | Modulación de la cuantía según la renta y anticipo del pago | Bases, art. 8 (cuantía de la subvención)\n\nNormas sociales y valores\nDiagnóstico de situación: Esta dimensión no es pertinente: la norma se limita a reintegrar parte del precio del curso; no organiza la formación ni incide en roles, estereotipos o representaciones.\nDimensión no pertinente para esta norma.\n3. Mandatos normativos y cumplimiento normativo\nGrupo | Mandato / medida | Artículo\nGrupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Cláusula expresa de exclusión de personas o entidades sancionadas por discriminación por razón de sexo — Bases, arts. 3 y 5 (requisitos y declaración responsable) | art. 23.2 DL 1/2023\nGrupo A · Integración de la perspectiva de género | Condición especial de ejecución vinculada a la igualdad | Bases (art. 23.3.c DL 1/2023)\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023\n\nCumplimiento normativo: Cumple el artículo 23: incorpora una cláusula expresa de exclusión de entidades y personas sancionadas por discriminación por razón de sexo (23.2), una condición especial de ejecución vinculada a la igualdad (23.3.c), los datos desagregados (art. 17) y el uso no sexista del lenguaje (art. 19.4) en toda la redacción de las bases.\n4. Resumen de medidas identificadas\nGrupo | Medida | Artículo | Dimensión\nGrupo G · Complementarias · Estadísticas | Recogida y publicación de datos desagregados de solicitantes y beneficiarias (sexo, edad, situación socioeconómica y procedencia) — Bases, art. 9 (instrucción) | art. 17 DL 1/2023 | Presencia\nGrupo C · Acción positiva para las mujeres | Acción positiva: mayor cuantía o porcentaje de reintegro para mujeres en situación de vulnerabilidad (discriminación múltiple, art. 3.1) — Bases, art. 8 (cuantía de la subvención) | art. 23.1 DL 1/2023 | Acceso\nGrupo D · Medidas neutras con impacto positivo · Nivel de renta | Modulación de la cuantía según la renta y anticipo del pago | Bases, art. 8 (cuantía de la subvención) | Acceso\nGrupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Cláusula expresa de exclusión de personas o entidades sancionadas por discriminación por razón de sexo — Bases, arts. 3 y 5 (requisitos y declaración responsable) | art. 23.2 DL 1/2023 | Normativa\nGrupo A · Integración de la perspectiva de género | Condición especial de ejecución vinculada a la igualdad | Bases (art. 23.3.c DL 1/2023) | Normativa\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023 | Normativa\n\n5. Resultado de la evaluación\nPOSITIVO\nJustificación: El ámbito es pertinente y el diagnóstico identifica una incidencia claramente feminizada y una brecha económica de acceso. La norma incorpora, dentro de su objeto, una acción positiva que otorga mayor cuantía a las mujeres en situación de vulnerabilidad, la modulación por renta y el anticipo del pago, junto con los datos desagregados, la cláusula de exclusión del art. 23.2, una condición de ejecución de igualdad y el uso no sexista del lenguaje. Cumple así de forma completa el artículo 23 y actúa sobre la brecha detectada: el resultado es positivo.\n\nPersona firmante: [Órgano promotor — Servicio de Euskera] · fecha.\n\nNota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.En el expediente real (analizado en el capítulo 4), las bases se trataron como carentes de impacto y solo cumplían, de forma incompleta, la cláusula de exclusión del art. 23.2. Aquí se presenta el modelo que cumple bien el artículo 23 y actúa sobre la brecha económica de acceso, tal como el órgano promotor —el Servicio de Euskera— debería haber elaborado la evaluación.\n",
+    "nota_modelo": "Nota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.En el expediente real (analizado en el capítulo 4), las bases se trataron como carentes de impacto y solo cumplían, de forma incompleta, la cláusula de exclusión del art. 23.2. Aquí se presenta el modelo que cumple bien el artículo 23 y actúa sobre la brecha económica de acceso, tal como el órgano promotor —el Servicio de Euskera— debería haber elaborado la evaluación."
+  }
+}

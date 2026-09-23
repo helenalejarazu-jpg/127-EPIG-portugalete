@@ -1,0 +1,96 @@
+{
+  "_format": "epig-portugalete-borrador",
+  "_version": 2,
+  "_lang": "es",
+  "_radios": {
+    "instr": "norma",
+    "normcat": "subv",
+    "result": "POS",
+    "gap-d1": "si",
+    "prev-d1": "si",
+    "gap-d2": "si",
+    "prev-d2": "si",
+    "gap-d3": "si",
+    "prev-d3": "si",
+    "gap-d4": "si",
+    "prev-d4": "si"
+  },
+  "f-denom": "Bases reguladoras de las ayudas a las AMPAs, asociaciones de alumnado de Educación de Personas Adultas y cooperativas de enseñanza del municipio.",
+  "f-area": "Educación, Juventud y Deportes.",
+  "f-resp": "Área de Educación (informe emitido por la Técnica de Igualdad a su solicitud).",
+  "f-obj": "Subvencionar las actividades extraescolares y la actividad asociativa de las AMPAs, asociaciones de alumnado de EPA y cooperativas de enseñanza.\n\nConsignación presupuestaria: A consignar (no figura en la documentación disponible).",
+  "f-obj-eq": "Integrar la igualdad como requisito de acceso y como contenido de la actividad subvencionada (trayectoria en igualdad, medidas coeducativas y datos desagregados en la memoria).",
+  "f-budget": "",
+  "f-normname": "",
+  "f-exempt-just": "",
+  "f-d1-diag": "Las AMPAs son espacios fuertemente feminizados: la gestión asociativa, la organización de las actividades, la interlocución con los centros y la representación en los consejos escolares recaen de manera desproporcionada en las madres, mientras los padres participan de forma minoritaria (guía de Educación de Emakunde; II Plan de Coeducación para el sistema educativo vasco). La comunidad educativa es, en conjunto, feminizada —la docencia de infantil, primaria y Educación de Personas Adultas lo está, y el Consejo Escolar de Euskadi tiene 7 mujeres de 11 en su comisión permanente—. No existe dato desagregado por sexo de la composición de las AMPAs de Portugalete —Emakunde no lo produce—: debe construirse localmente.",
+  "f-d1-expl": "Contribuye porque las bases exigen datos desagregados por sexo en la memoria de actuación, incluida la composición por sexo de las juntas directivas y de las plantillas, de modo que se conoce quién dirige y gestiona las AMPAs y se dimensiona la feminización.",
+  "f-d2-diag": "Las bases garantizan la composición equilibrada del órgano colegiado que evalúa las solicitudes (art. 6 de las bases). Pero la participación dentro de las propias AMPAs —quién forma y dirige las juntas directivas, quién representa a la asociación en los consejos escolares— es donde se concentra la feminización, y ni se analiza ni se exige dato.",
+  "f-d2-expl": "Contribuye en el órgano que la norma regula directamente —garantiza la composición equilibrada del órgano colegiado de valoración (art. 6)—, pero no incide en la composición de las juntas directivas de las AMPAs, donde se concentra el desequilibrio.",
+  "f-d3-diag": "El acceso se decide por el baremo (art. 3 de las bases): una cantidad fija por entidad (300 € en centros públicos, 100 € en concertados), una cantidad por el porcentaje de alumnado becado del centro y una cantidad por alumno o alumna. Atiende a la dimensión socioeconómica del centro, pero las condiciones —cuantía, plazos, documentación a aportar— son uniformes y no se ha analizado si penalizan a las asociaciones de los centros con familias en mayor vulnerabilidad.",
+  "f-d3-expl": "Contribuye porque el baremo reserva al menos un 5 % a criterios de igualdad —el contenido coeducativo efectivo de las actividades y el fomento de la corresponsabilidad de los padres en la gestión y los cuidados—, de modo que la valoración, que decide el reparto, pondera la igualdad; además, examina con dato local si las condiciones penalizan a las asociaciones de centros con familias en mayor vulnerabilidad y, en su caso, las modula.",
+  "f-d4-diag": "Las bases exigen como requisito una trayectoria o formación en igualdad (art. 2) y, en la memoria, medidas coeducativas y de prevención de sesgos de género (art. 9): un contenido que actúa sobre los roles. Pero no se evalúa si las actividades subvencionadas cuestionan de verdad los estereotipos ni si la propia estructura del AMPA —madres que gestionan y cuidan, padres ausentes— reproduce la división sexual del trabajo de cuidados.",
+  "f-d4-expl": "Contribuye porque incorpora el requisito de trayectoria o formación en igualdad como condición de acceso (art. 2) y formula como condición especial de ejecución la realización de al menos una medida coeducativa efectiva (art. 9), actuando sobre los roles y la división sexual de los cuidados en la comunidad educativa.",
+  "f-legal-expl": "Grupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Prohibición de concurrir a entidades sancionadas por discriminación | Bases, art. 2.3 (art. 23.2 DL 1/2023)\n\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023\n\nCumple el artículo 23 de forma completa: reserva del 5 % del baremo a criterios de igualdad (23.3.b), requisito de trayectoria en igualdad (23.3.a), condición especial de ejecución coeducativa (23.3.c), datos desglosados completos (23.3.d) y exclusión de entidades sancionadas (23.2); además, aplica el uso no sexista del lenguaje (art. 19.4).",
+  "plan-s1-a": "",
+  "plan-s1-b": "",
+  "plan-s1-expl": "",
+  "plan-s2-a": "",
+  "plan-s2-b": "",
+  "plan-s2-expl": "",
+  "plan-s3-a": "",
+  "plan-s3-b": "",
+  "plan-s3-expl": "",
+  "plan-s4-a": "",
+  "plan-s4-b": "",
+  "plan-s4-expl": "",
+  "plan-s5-a": "",
+  "plan-s5-b": "",
+  "plan-s5-expl": "",
+  "f-result-just": "Las bases incorporan un contenido de igualdad sustancial que actúa sobre las brechas detectadas: el requisito de trayectoria en igualdad como condición de acceso, las medidas coeducativas y los datos desagregados completos en la memoria como obligación de ejecución, la composición equilibrada del órgano evaluador, la exclusión de entidades sancionadas y —de forma determinante— la reserva del 5 % del baremo a criterios de igualdad, que hace que la valoración pondere la igualdad. La integración se produjo durante la elaboración de la norma y quedó en su articulado: el resultado es positivo.",
+  "f-signatory": "[Órgano promotor — Área de Educación] · fecha.",
+  "_selectedMeasures": {
+    "d1_G_2": {
+      "dim": "d1",
+      "group": "G",
+      "oi": 2,
+      "article": "Datos desagregados por sexo en la memoria, incluida la composición de juntas directivas y plantillas — Bases, art. 9 (art. 23.3.d DL 1/2023)"
+    },
+    "d2_B_4": {
+      "dim": "d2",
+      "group": "B",
+      "oi": 4,
+      "article": "Composición equilibrada del órgano colegiado de valoración — Bases, art. 6 (principio de representación equilibrada, art. 3.10 DL 1/2023)"
+    },
+    "d3_A_4": {
+      "dim": "d3",
+      "group": "A",
+      "oi": 4,
+      "article": "Reserva de al menos un 5 % del baremo a criterios de igualdad (contenido coeducativo y corresponsabilidad) — Bases, art. 3 (art. 23.3.b DL 1/2023)"
+    },
+    "d4_A_4": {
+      "dim": "d4",
+      "group": "A",
+      "oi": 4,
+      "article": "Requisito de trayectoria o formación en igualdad como condición de acceso — Bases, art. 2 (art. 23.3.a DL 1/2023)"
+    },
+    "d4_A_5": {
+      "dim": "d4",
+      "group": "A",
+      "oi": 5,
+      "article": "Condición especial de ejecución: al menos una medida coeducativa efectiva — Bases, art. 9 (art. 23.3.c DL 1/2023)"
+    }
+  },
+  "_checkedMandates": {
+    "A4": true,
+    "A6": true,
+    "A8": true
+  },
+  "_fuente": {
+    "documento": "6__Capitulo_7_Dossieres_MODELO_positivo_v3.docx",
+    "tipo": "Dossier modelo didáctico; no es el expediente real",
+    "titulo": "EDUCACIÓN · EXPEDIENTE N.º 6: AYUDAS A AMPAS, ASOCIACIONES DE ALUMNADO DE EPA Y COOPERATIVAS DE ENSEÑANZA",
+    "texto_completo": "EDUCACIÓN · EXPEDIENTE N.º 6: AYUDAS A AMPAS, ASOCIACIONES DE ALUMNADO DE EPA Y COOPERATIVAS DE ENSEÑANZA\nBases reguladoras de las ayudas a AMPAs, asociaciones de alumnado de EPA y cooperativas de enseñanza\nDossier modelo · ejemplo de EPIG bien integradaEjemplo demostrativo del formulario: las medidas se presentan como incorporadas a la norma para ilustrar una evaluación con resultado positivo. No reproduce el contenido literal del expediente real (véase la nota final).\nInforme de evaluación previa de impacto de género\nBases reguladoras de las ayudas a las AMPAs, asociaciones de alumnado de Educación de Personas Adultas y cooperativas de enseñanza del municipio.\n1. Datos del proyecto\nDenominación: Bases reguladoras de las ayudas a las AMPAs, asociaciones de alumnado de Educación de Personas Adultas y cooperativas de enseñanza del municipio.\nÁrea/Departamento: Educación, Juventud y Deportes.\nPersona responsable: Área de Educación (informe emitido por la Técnica de Igualdad a su solicitud).\nObjetivos del proyecto: Subvencionar las actividades extraescolares y la actividad asociativa de las AMPAs, asociaciones de alumnado de EPA y cooperativas de enseñanza.\nObjetivos de igualdad: Integrar la igualdad como requisito de acceso y como contenido de la actividad subvencionada (trayectoria en igualdad, medidas coeducativas y datos desagregados en la memoria).\nConsignación presupuestaria: A consignar (no figura en la documentación disponible).\nTipo de norma: Bases reguladoras de subvenciones aprobadas por el Pleno (2022) y publicadas en el BOB → disposición de carácter general.\nVerificación de aplicabilidad\nLas bases reguladoras, aprobadas por el Pleno y publicadas en el BOB, son una disposición de carácter general y les correspondía una evaluación previa de impacto de género desde su aprobación (art. 20). El informe original, riguroso en la revisión normativa, no siguió la estructura de dimensiones. Se realiza evaluación completa con estructura dimensional.\n2. Análisis del impacto en función del género\nPresencia de mujeres y hombres\nDiagnóstico de situación: Las AMPAs son espacios fuertemente feminizados: la gestión asociativa, la organización de las actividades, la interlocución con los centros y la representación en los consejos escolares recaen de manera desproporcionada en las madres, mientras los padres participan de forma minoritaria (guía de Educación de Emakunde; II Plan de Coeducación para el sistema educativo vasco). La comunidad educativa es, en conjunto, feminizada —la docencia de infantil, primaria y Educación de Personas Adultas lo está, y el Consejo Escolar de Euskadi tiene 7 mujeres de 11 en su comisión permanente—. No existe dato desagregado por sexo de la composición de las AMPAs de Portugalete —Emakunde no lo produce—: debe construirse localmente.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque las bases exigen datos desagregados por sexo en la memoria de actuación, incluida la composición por sexo de las juntas directivas y de las plantillas, de modo que se conoce quién dirige y gestiona las AMPAs y se dimensiona la feminización.\nGrupo | Medida | Artículo\nGrupo G · Complementarias · Estadísticas | Datos desagregados por sexo en la memoria, incluida la composición de juntas directivas y plantillas | Bases, art. 9 (art. 23.3.d DL 1/2023)\n\nParticipación en la toma de decisiones\nDiagnóstico de situación: Las bases garantizan la composición equilibrada del órgano colegiado que evalúa las solicitudes (art. 6 de las bases). Pero la participación dentro de las propias AMPAs —quién forma y dirige las juntas directivas, quién representa a la asociación en los consejos escolares— es donde se concentra la feminización, y ni se analiza ni se exige dato.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye en el órgano que la norma regula directamente —garantiza la composición equilibrada del órgano colegiado de valoración (art. 6)—, pero no incide en la composición de las juntas directivas de las AMPAs, donde se concentra el desequilibrio.\nGrupo | Medida | Artículo\nGrupo B · Participación equilibrada | Composición equilibrada del órgano colegiado de valoración | Bases, art. 6 (principio de representación equilibrada, art. 3.10 DL 1/2023)\n\nAcceso y uso de los recursos\nDiagnóstico de situación: El acceso se decide por el baremo (art. 3 de las bases): una cantidad fija por entidad (300 € en centros públicos, 100 € en concertados), una cantidad por el porcentaje de alumnado becado del centro y una cantidad por alumno o alumna. Atiende a la dimensión socioeconómica del centro, pero las condiciones —cuantía, plazos, documentación a aportar— son uniformes y no se ha analizado si penalizan a las asociaciones de los centros con familias en mayor vulnerabilidad.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque el baremo reserva al menos un 5 % a criterios de igualdad —el contenido coeducativo efectivo de las actividades y el fomento de la corresponsabilidad de los padres en la gestión y los cuidados—, de modo que la valoración, que decide el reparto, pondera la igualdad; además, examina con dato local si las condiciones penalizan a las asociaciones de centros con familias en mayor vulnerabilidad y, en su caso, las modula.\nGrupo | Medida | Artículo\nGrupo A · Integración de la perspectiva de género | Reserva de al menos un 5 % del baremo a criterios de igualdad (contenido coeducativo y corresponsabilidad) | Bases, art. 3 (art. 23.3.b DL 1/2023)\n\nNormas sociales y valores\nDiagnóstico de situación: Las bases exigen como requisito una trayectoria o formación en igualdad (art. 2) y, en la memoria, medidas coeducativas y de prevención de sesgos de género (art. 9): un contenido que actúa sobre los roles. Pero no se evalúa si las actividades subvencionadas cuestionan de verdad los estereotipos ni si la propia estructura del AMPA —madres que gestionan y cuidan, padres ausentes— reproduce la división sexual del trabajo de cuidados.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque incorpora el requisito de trayectoria o formación en igualdad como condición de acceso (art. 2) y formula como condición especial de ejecución la realización de al menos una medida coeducativa efectiva (art. 9), actuando sobre los roles y la división sexual de los cuidados en la comunidad educativa.\nGrupo | Medida | Artículo\nGrupo A · Integración de la perspectiva de género | Requisito de trayectoria o formación en igualdad como condición de acceso | Bases, art. 2 (art. 23.3.a DL 1/2023)\nGrupo A · Integración de la perspectiva de género | Condición especial de ejecución: al menos una medida coeducativa efectiva | Bases, art. 9 (art. 23.3.c DL 1/2023)\n\n3. Mandatos normativos y cumplimiento normativo\nGrupo | Mandato / medida | Artículo\nGrupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Prohibición de concurrir a entidades sancionadas por discriminación | Bases, art. 2.3 (art. 23.2 DL 1/2023)\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023\n\nCumplimiento normativo: Cumple el artículo 23 de forma completa: reserva del 5 % del baremo a criterios de igualdad (23.3.b), requisito de trayectoria en igualdad (23.3.a), condición especial de ejecución coeducativa (23.3.c), datos desglosados completos (23.3.d) y exclusión de entidades sancionadas (23.2); además, aplica el uso no sexista del lenguaje (art. 19.4).\n4. Resumen de medidas identificadas\nGrupo | Medida | Artículo | Dimensión\nGrupo G · Complementarias · Estadísticas | Datos desagregados por sexo en la memoria, incluida la composición de juntas directivas y plantillas | Bases, art. 9 (art. 23.3.d DL 1/2023) | Presencia\nGrupo B · Participación equilibrada | Composición equilibrada del órgano colegiado de valoración | Bases, art. 6 (principio de representación equilibrada, art. 3.10 DL 1/2023) | Participación\nGrupo A · Integración de la perspectiva de género | Reserva de al menos un 5 % del baremo a criterios de igualdad (contenido coeducativo y corresponsabilidad) | Bases, art. 3 (art. 23.3.b DL 1/2023) | Acceso\nGrupo A · Integración de la perspectiva de género | Requisito de trayectoria o formación en igualdad como condición de acceso | Bases, art. 2 (art. 23.3.a DL 1/2023) | Normas sociales\nGrupo A · Integración de la perspectiva de género | Condición especial de ejecución: al menos una medida coeducativa efectiva | Bases, art. 9 (art. 23.3.c DL 1/2023) | Normas sociales\nGrupo F · Medidas prohibitivas o sancionadoras · Discriminación por sexo | Prohibición de concurrir a entidades sancionadas por discriminación | Bases, art. 2.3 (art. 23.2 DL 1/2023) | Normativa\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19.4 DL 1/2023 | Normativa\n\n5. Resultado de la evaluación\nPOSITIVO\nJustificación: Las bases incorporan un contenido de igualdad sustancial que actúa sobre las brechas detectadas: el requisito de trayectoria en igualdad como condición de acceso, las medidas coeducativas y los datos desagregados completos en la memoria como obligación de ejecución, la composición equilibrada del órgano evaluador, la exclusión de entidades sancionadas y —de forma determinante— la reserva del 5 % del baremo a criterios de igualdad, que hace que la valoración pondere la igualdad. La integración se produjo durante la elaboración de la norma y quedó en su articulado: el resultado es positivo.\n\nPersona firmante: [Órgano promotor — Área de Educación] · fecha.\n\nNota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.Este dossier reelabora, como modelo bien integrado, el expediente 6 (resultado positivo). Respecto del expediente real, la versión modelo incorpora la mejora determinante que allí faltaba —la reserva del 5 % del baremo a criterios de igualdad (art. 23.3.b)— y completa los datos desglosados y el lenguaje, de modo que la valoración que decide el reparto sí pondera la igualdad.\n",
+    "nota_modelo": "Nota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.Este dossier reelabora, como modelo bien integrado, el expediente 6 (resultado positivo). Respecto del expediente real, la versión modelo incorpora la mejora determinante que allí faltaba —la reserva del 5 % del baremo a criterios de igualdad (art. 23.3.b)— y completa los datos desglosados y el lenguaje, de modo que la valoración que decide el reparto sí pondera la igualdad."
+  }
+}

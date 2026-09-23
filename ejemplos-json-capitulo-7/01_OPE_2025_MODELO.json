@@ -1,0 +1,108 @@
+{
+  "_format": "epig-portugalete-borrador",
+  "_version": 2,
+  "_lang": "es",
+  "_radios": {
+    "instr": "acto",
+    "acttype": "empleo",
+    "result": "POS",
+    "gap-d1": "si",
+    "prev-d1": "si",
+    "gap-d2": "no",
+    "prev-d2": "si",
+    "gap-d3": "si",
+    "prev-d3": "si",
+    "gap-d4": "si",
+    "prev-d4": "si"
+  },
+  "f-denom": "Oferta de Empleo Público 2025 (26 plazas), Bases Generales (funcionariado y personal laboral) y 11 Bases Específicas. Incluye la declaración de caducidad de las OPE 2022 y 2023.",
+  "f-area": "Recursos Humanos / Empleo público.",
+  "f-resp": "Directora de Recursos Humanos (evaluación firmada conjuntamente con la Técnica de Igualdad).",
+  "f-obj": "Convocar los procesos selectivos de la OPE 2025 y regular su desarrollo mediante las bases generales y específicas.\n\nConsignación presupuestaria: A consignar (no figura en el expediente).",
+  "f-obj-eq": "Garantizar el acceso al empleo público en condiciones de igualdad, corregir la infrarrepresentación de mujeres en las categorías masculinizadas y asegurar la composición paritaria de los órganos de selección.",
+  "f-budget": "",
+  "f-normname": "",
+  "f-exempt-just": "",
+  "f-d1-diag": "El informe distingue dos universos: el turno libre, abierto a cualquier persona —cuyo impacto por sexo no puede preverse a priori—, y el turno de promoción interna, acotado al personal del Ayuntamiento, donde la presencia posible de mujeres se limita al 18,96 %. Aporta datos desagregados plaza por plaza: 8 mujeres y 36 hombres en policía local, 0 mujeres y 8 hombres en encargados, 3 y 3 en cultura. La mayoría de las plazas de promoción interna pertenecen a cuerpos históricamente masculinizados.",
+  "f-d1-expl": "Contribuye porque activa expresamente la cláusula de prioridad: a igualdad de capacitación, prioridad a las mujeres en las categorías con representación femenina inferior al 40 %, lo que actúa directamente sobre la infrarrepresentación.",
+  "f-d2-diag": "La fase de elaboración tiene un 70 % de presencia femenina (Junta de Gobierno: 5 mujeres y 2 hombres, más la Secretaria General y la Directora) y la negociación sindical un 50 % exacto (6 mujeres y 6 hombres): la paridad está lograda en ambas fases.",
+  "f-d2-expl": "La paridad alcanzada se asegura, además, en los órganos de selección: la norma impone la composición paritaria obligatoria de los tribunales.",
+  "f-d3-diag": "Acceso directo: turno libre universal y turno de promoción interna restringido al personal (18,96 % de mujeres). Acceso indirecto: a través de los tribunales.",
+  "f-d3-expl": "Contribuye porque habilita la participación en la promoción interna desde la excedencia por violencia de género, cuidados y monoparentalidad e incorpora el turno reservado para personas con discapacidad; además, los baremos del concurso-oposición computan como experiencia el tiempo en excedencia por cuidados, reducción de jornada, permisos de conciliación y situaciones de violencia de género (art. 21.1.c).",
+  "f-d4-diag": "El informe identifica los puestos masculinizados (parque móvil, policía local, oficios), los vincula con los roles tradicionales de género y señala que esa segregación debe revertirse.",
+  "f-d4-expl": "Contribuye porque, junto a la cláusula de prioridad (Base 10.ª) y las excedencias (Base 4.2.a), incorpora campañas de sensibilización concretas para las plazas masculinizadas —con categorías, acciones y plazo— y la protección de la maternidad en los llamamientos (art. 21.1.d), actuando sobre la segregación y la perpetuación de roles.",
+  "f-legal-expl": "Grupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19 DL 1/2023\n\nGrupo G · Complementarias · Estadísticas | Datos desagregados por sexo | art. 17 DL 1/2023\n\nGrupo G · Complementarias · Seguimiento | Seguimiento con perspectiva de género de la participación y el resultado por sexo y por plaza | Bases (art. 21.1.a DL 1/2023)\n\nCumple el uso no sexista del lenguaje (art. 19) y los datos desagregados por sexo (art. 17), activa en las propias Bases la mayor parte del art. 21 (cláusula de prioridad, tribunales paritarios, participación y cómputo desde las excedencias, protección de la maternidad) e incorpora el seguimiento con perspectiva de género de los procesos por sexo y por plaza. El marco se completa con la Ley 11/2022 (arts. 70 y 77) y el TREBEP (arts. 10.2 y 11.3).",
+  "plan-s1-a": "",
+  "plan-s1-b": "",
+  "plan-s1-expl": "",
+  "plan-s2-a": "",
+  "plan-s2-b": "",
+  "plan-s2-expl": "",
+  "plan-s3-a": "",
+  "plan-s3-b": "",
+  "plan-s3-expl": "",
+  "plan-s4-a": "",
+  "plan-s4-b": "",
+  "plan-s4-expl": "",
+  "plan-s5-a": "",
+  "plan-s5-b": "",
+  "plan-s5-expl": "",
+  "f-result-just": "La norma incorpora a su articulado la mayor parte del artículo 21: la cláusula de prioridad (Base 10.ª), la paridad de los tribunales (Base 7.ª), la participación y el cómputo desde la excedencia por cuidados, violencia de género y monoparentalidad (Base 4.2.a y baremo), la protección de la maternidad en los llamamientos, las campañas de sensibilización concretadas y el seguimiento con perspectiva de género. No se limita a mencionar estas medidas: las incorpora. La evaluación trabaja con datos desagregados reales y reconoce abiertamente la masculinización de determinados cuerpos sin disfrazarla de neutralidad. El resultado es positivo.",
+  "f-signatory": "Directora de Recursos Humanos y Técnica de Igualdad · fecha.",
+  "_selectedMeasures": {
+    "d1_C_0": {
+      "dim": "d1",
+      "group": "C",
+      "oi": 0,
+      "article": "Cláusula de prioridad en las categorías con menos del 40 % de mujeres — Bases, Base 10.ª (art. 21.1.a DL 1/2023)"
+    },
+    "d2_B_0": {
+      "dim": "d2",
+      "group": "B",
+      "oi": 0,
+      "article": "Composición paritaria de los tribunales de selección — Bases, Base 7.ª (art. 21.1.b DL 1/2023)"
+    },
+    "d3_D_3": {
+      "dim": "d3",
+      "group": "D",
+      "oi": 3,
+      "article": "Participación desde la excedencia por violencia de género, cuidados y monoparentalidad — Bases, Base 4.2.a (art. 21.1 DL 1/2023)"
+    },
+    "d3_C_0": {
+      "dim": "d3",
+      "group": "C",
+      "oi": 0,
+      "article": "Cómputo en el baremo del tiempo en excedencia por cuidados, reducción de jornada, conciliación y violencia de género — Bases, baremo (art. 21.1.c DL 1/2023)"
+    },
+    "d3_E_3": {
+      "dim": "d3",
+      "group": "E",
+      "oi": 3,
+      "article": "Turno reservado para personas con discapacidad — Bases"
+    },
+    "d4_C_0": {
+      "dim": "d4",
+      "group": "C",
+      "oi": 0,
+      "article": "Campañas de sensibilización para las plazas masculinizadas, con categorías, acciones y plazo — Bases (art. 21.1.a DL 1/2023)"
+    },
+    "d4_D_1": {
+      "dim": "d4",
+      "group": "D",
+      "oi": 1,
+      "article": "Protección de la maternidad en los llamamientos, con atención a las familias monomarentales — Bases (art. 21.1.d DL 1/2023)"
+    }
+  },
+  "_checkedMandates": {
+    "A4": true,
+    "A6": true,
+    "A13": true
+  },
+  "_fuente": {
+    "documento": "6__Capitulo_7_Dossieres_MODELO_positivo_v3.docx",
+    "tipo": "Dossier modelo didáctico; no es el expediente real",
+    "titulo": "RRHH / EMPLEO PÚBLICO · EXPEDIENTE N.º 4: OPE 2025 + BASES GENERALES Y ESPECÍFICAS",
+    "texto_completo": "RRHH / EMPLEO PÚBLICO · EXPEDIENTE N.º 4: OPE 2025 + BASES GENERALES Y ESPECÍFICAS\nOferta de Empleo Público 2025, Bases Generales y Bases Específicas\nDossier modelo · ejemplo de EPIG bien integradaEjemplo demostrativo del formulario: las medidas se presentan como incorporadas a la norma para ilustrar una evaluación con resultado positivo. No reproduce el contenido literal del expediente real (véase la nota final).\nInforme de evaluación previa de impacto de género\nOferta de Empleo Público 2025 (26 plazas), Bases Generales (funcionariado y personal laboral) y 11 Bases Específicas. Incluye la declaración de caducidad de las OPE 2022 y 2023.\n1. Datos del proyecto\nDenominación: Oferta de Empleo Público 2025 (26 plazas), Bases Generales (funcionariado y personal laboral) y 11 Bases Específicas. Incluye la declaración de caducidad de las OPE 2022 y 2023.\nÁrea/Departamento: Recursos Humanos / Empleo público.\nPersona responsable: Directora de Recursos Humanos (evaluación firmada conjuntamente con la Técnica de Igualdad).\nObjetivos del proyecto: Convocar los procesos selectivos de la OPE 2025 y regular su desarrollo mediante las bases generales y específicas.\nObjetivos de igualdad: Garantizar el acceso al empleo público en condiciones de igualdad, corregir la infrarrepresentación de mujeres en las categorías masculinizadas y asegurar la composición paritaria de los órganos de selección.\nConsignación presupuestaria: A consignar (no figura en el expediente).\nTipo de norma: Acto administrativo expresamente sujeto a EPIG — convocatoria de oferta pública de empleo y sus bases (art. 20 DL 1/2023).\n2. Análisis del impacto en función del género\nPresencia de mujeres y hombres\nDiagnóstico de situación: El informe distingue dos universos: el turno libre, abierto a cualquier persona —cuyo impacto por sexo no puede preverse a priori—, y el turno de promoción interna, acotado al personal del Ayuntamiento, donde la presencia posible de mujeres se limita al 18,96 %. Aporta datos desagregados plaza por plaza: 8 mujeres y 36 hombres en policía local, 0 mujeres y 8 hombres en encargados, 3 y 3 en cultura. La mayoría de las plazas de promoción interna pertenecen a cuerpos históricamente masculinizados.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque activa expresamente la cláusula de prioridad: a igualdad de capacitación, prioridad a las mujeres en las categorías con representación femenina inferior al 40 %, lo que actúa directamente sobre la infrarrepresentación.\nGrupo | Medida | Artículo\nGrupo C · Acción positiva para las mujeres | Cláusula de prioridad en las categorías con menos del 40 % de mujeres | Bases, Base 10.ª (art. 21.1.a DL 1/2023)\n\nParticipación en la toma de decisiones\nDiagnóstico de situación: La fase de elaboración tiene un 70 % de presencia femenina (Junta de Gobierno: 5 mujeres y 2 hombres, más la Secretaria General y la Directora) y la negociación sindical un 50 % exacto (6 mujeres y 6 hombres): la paridad está lograda en ambas fases.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nNo | Sí\n\nMedidas previstas: La paridad alcanzada se asegura, además, en los órganos de selección: la norma impone la composición paritaria obligatoria de los tribunales.\nGrupo | Medida | Artículo\nGrupo B · Participación equilibrada | Composición paritaria de los tribunales de selección | Bases, Base 7.ª (art. 21.1.b DL 1/2023)\n\nAcceso y uso de los recursos\nDiagnóstico de situación: Acceso directo: turno libre universal y turno de promoción interna restringido al personal (18,96 % de mujeres). Acceso indirecto: a través de los tribunales.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque habilita la participación en la promoción interna desde la excedencia por violencia de género, cuidados y monoparentalidad e incorpora el turno reservado para personas con discapacidad; además, los baremos del concurso-oposición computan como experiencia el tiempo en excedencia por cuidados, reducción de jornada, permisos de conciliación y situaciones de violencia de género (art. 21.1.c).\nGrupo | Medida | Artículo\nGrupo D · Medidas neutras con impacto positivo | Participación desde la excedencia por violencia de género, cuidados y monoparentalidad | Bases, Base 4.2.a (art. 21.1 DL 1/2023)\nGrupo C · Acción positiva para las mujeres | Cómputo en el baremo del tiempo en excedencia por cuidados, reducción de jornada, conciliación y violencia de género | Bases, baremo (art. 21.1.c DL 1/2023)\nGrupo E · Discriminación múltiple · Discapacidad | Turno reservado para personas con discapacidad | Bases\n\nNormas sociales y valores\nDiagnóstico de situación: El informe identifica los puestos masculinizados (parque móvil, policía local, oficios), los vincula con los roles tradicionales de género y señala que esa segregación debe revertirse.\n¿Brecha detectada? | ¿Contribuye a disminuir?\nSí | Sí\n\nMedidas previstas: Contribuye porque, junto a la cláusula de prioridad (Base 10.ª) y las excedencias (Base 4.2.a), incorpora campañas de sensibilización concretas para las plazas masculinizadas —con categorías, acciones y plazo— y la protección de la maternidad en los llamamientos (art. 21.1.d), actuando sobre la segregación y la perpetuación de roles.\nGrupo | Medida | Artículo\nGrupo C · Acción positiva para las mujeres | Campañas de sensibilización para las plazas masculinizadas, con categorías, acciones y plazo | Bases (art. 21.1.a DL 1/2023)\nGrupo D · Medidas neutras con impacto positivo | Protección de la maternidad en los llamamientos, con atención a las familias monomarentales | Bases (art. 21.1.d DL 1/2023)\n\n3. Mandatos normativos y cumplimiento normativo\nGrupo | Mandato / medida | Artículo\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19 DL 1/2023\nGrupo G · Complementarias · Estadísticas | Datos desagregados por sexo | art. 17 DL 1/2023\nGrupo G · Complementarias · Seguimiento | Seguimiento con perspectiva de género de la participación y el resultado por sexo y por plaza | Bases (art. 21.1.a DL 1/2023)\n\nCumplimiento normativo: Cumple el uso no sexista del lenguaje (art. 19) y los datos desagregados por sexo (art. 17), activa en las propias Bases la mayor parte del art. 21 (cláusula de prioridad, tribunales paritarios, participación y cómputo desde las excedencias, protección de la maternidad) e incorpora el seguimiento con perspectiva de género de los procesos por sexo y por plaza. El marco se completa con la Ley 11/2022 (arts. 70 y 77) y el TREBEP (arts. 10.2 y 11.3).\n4. Resumen de medidas identificadas\nGrupo | Medida | Artículo | Dimensión\nGrupo C · Acción positiva para las mujeres | Cláusula de prioridad en las categorías con menos del 40 % de mujeres | Bases, Base 10.ª (art. 21.1.a DL 1/2023) | Presencia\nGrupo B · Participación equilibrada | Composición paritaria de los tribunales de selección | Bases, Base 7.ª (art. 21.1.b DL 1/2023) | Participación\nGrupo D · Medidas neutras con impacto positivo | Participación desde la excedencia por violencia de género, cuidados y monoparentalidad | Bases, Base 4.2.a (art. 21.1 DL 1/2023) | Acceso\nGrupo C · Acción positiva para las mujeres | Cómputo en el baremo del tiempo en excedencia por cuidados, reducción de jornada, conciliación y violencia de género | Bases, baremo (art. 21.1.c DL 1/2023) | Acceso\nGrupo E · Discriminación múltiple · Discapacidad | Turno reservado para personas con discapacidad | Bases | Acceso\nGrupo C · Acción positiva para las mujeres | Campañas de sensibilización para las plazas masculinizadas, con categorías, acciones y plazo | Bases (art. 21.1.a DL 1/2023) | Normas sociales\nGrupo D · Medidas neutras con impacto positivo | Protección de la maternidad en los llamamientos, con atención a las familias monomarentales | Bases (art. 21.1.d DL 1/2023) | Normas sociales\nGrupo A · Integración de la perspectiva de género · Lenguaje | Uso no sexista del lenguaje | art. 19 DL 1/2023 | Normativa\nGrupo G · Complementarias · Estadísticas | Datos desagregados por sexo | art. 17 DL 1/2023 | Normativa\nGrupo G · Complementarias · Seguimiento | Seguimiento con perspectiva de género de la participación y el resultado por sexo y por plaza | Bases (art. 21.1.a DL 1/2023) | Normativa\n\n5. Resultado de la evaluación\nPOSITIVO\nJustificación: La norma incorpora a su articulado la mayor parte del artículo 21: la cláusula de prioridad (Base 10.ª), la paridad de los tribunales (Base 7.ª), la participación y el cómputo desde la excedencia por cuidados, violencia de género y monoparentalidad (Base 4.2.a y baremo), la protección de la maternidad en los llamamientos, las campañas de sensibilización concretadas y el seguimiento con perspectiva de género. No se limita a mencionar estas medidas: las incorpora. La evaluación trabaja con datos desagregados reales y reconoce abiertamente la masculinización de determinados cuerpos sin disfrazarla de neutralidad. El resultado es positivo.\n\nPersona firmante: Directora de Recursos Humanos y Técnica de Igualdad · fecha.\n\nNota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.Este dossier reelabora, como modelo bien integrado, el expediente 4 (resultado positivo). Respecto del expediente real, la versión modelo incorpora al articulado las mejoras que allí quedaron como propuesta —el cómputo de cuidados en el baremo (art. 21.1.c), la protección de la maternidad (art. 21.1.d), las campañas de sensibilización concretadas y el seguimiento con perspectiva de género—, cerrando el cumplimiento del artículo 21.\n",
+    "nota_modelo": "Nota del dossier modeloRelación del dossier modelo con el expediente real. No forma parte del informe generado por la herramienta.Este dossier reelabora, como modelo bien integrado, el expediente 4 (resultado positivo). Respecto del expediente real, la versión modelo incorpora al articulado las mejoras que allí quedaron como propuesta —el cómputo de cuidados en el baremo (art. 21.1.c), la protección de la maternidad (art. 21.1.d), las campañas de sensibilización concretadas y el seguimiento con perspectiva de género—, cerrando el cumplimiento del artículo 21."
+  }
+}
