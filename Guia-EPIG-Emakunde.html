@@ -327,6 +327,19 @@ footer.pie{border-top:1px solid var(--linea);background:var(--blanco)}
   .bloque{page-break-inside:avoid}
 }
 </style>
+<style>
+.fuente-original{margin:18px 0;padding:14px 0;border-bottom:1px solid var(--linea);font-size:14px}
+.fuente-original p{margin:9px 0;max-width:85ch;color:var(--gris)}
+a.original{display:inline-block;text-decoration:underline;margin:3px 18px 5px 0;font-weight:700}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+button.hit{display:block;width:100%;text-align:left;font-family:inherit;font-size:inherit;background:white;color:var(--tinta);cursor:pointer}
+.hit .ctx,.hit-text{display:block}.hit-text{margin-top:6px}
+button:focus-visible,a:focus-visible,th:focus-visible,pre:focus-visible{outline:3px solid var(--berenjena);outline-offset:3px}
+.coincidencia{background:#fff0bd;outline:2px solid #b8860b;scroll-margin-top:125px}
+.bloque,.subseccion{scroll-margin-top:125px}
+@media print{header.top,.subnav,#up,.crumbs,#mas-resultados{display:none!important}main{padding:0;max-width:none}.layout{display:block}.acc-body{display:block!important}.pre-tabla pre{white-space:pre-wrap!important;overflow-wrap:anywhere!important;overflow:visible!important;font-size:9pt}.tabla-scroll,.tabla-box,.pre-tabla{overflow:visible!important}table.dt{font-size:9pt}table.dt th{white-space:normal}thead{display:table-header-group}.acc,.tabla-box,.pre-tabla{break-inside:auto;box-shadow:none}.coincidencia{outline:0;background:none}.hero{color:#241a2e;background:white!important;box-shadow:none;padding:12px 0}a.original{color:#241a2e}.tabla-box tr{break-inside:avoid}}
+
+</style>
 </head>
 <body>
 <header class="top">
@@ -2083,6 +2096,59 @@ qinput.addEventListener('input',()=>{ clearTimeout(qt); qt=setTimeout(()=>{ if(q
 
 /* botón subir */
 window.addEventListener('scroll',()=>{ document.getElementById('up').classList.toggle('show',scrollY>500); });
+</script>
+<script>
+/* Revisión de consulta: navegación, accesibilidad y fuentes originales. */
+const FUENTE_EMAKUNDE='https://www.emakunde.euskadi.eus/informacion/evaluacion-impacto/webema01-contentemas/es/';
+const PDF_BASE='https://www.emakunde.euskadi.eus/contenidos/informacion/politicas_evaluaciones_2/es_def/adjuntos/';
+const PDF_SECTORES={cultura:'ms_cultura.pdf',exclusion:'ms_exclusion_social_pobreza.pdf',justicia:'ms_justicia.pdf',urbanismo:'ms_planificacion_territorial_urbanismo.pdf',deporte:'ms_deporte.pdf',desarrollo_rural:'ms_desarrollo_rural_agricultura.pdf',seguridad:'ms_seguridad_ciudadana.pdf',emprendimiento:'ms_emprendimiento_pymes.pdf',transporte:'ms_transporte_movilidad.pdf',idi:'ms_i-d-i.pdf',sociedad_info:'ms_sociedad_informacion.pdf',empleo:'ms_empleo.pdf',medio_ambiente:'ms_medio_ambiente.pdf',economia:'ms_economia.pdf',comunicacion:'ms_comunicacion.pdf',salud:'ms_salud.pdf',industria:'ms_industria_cas.pdf',educacion:'ms_educacion.pdf',juventud:'ms_juventud.pdf',turismo:'ms_turismo_cas.pdf'};
+const PDF_MARCO='https://www.emakunde.euskadi.eus/contenidos/informacion/politicas_marco/es_ley_igua/adjuntos/marco.juridico.pdf';
+const PDF_MANDATOS='https://www.emakunde.euskadi.eus/contenidos/informacion/politicas_marco/es_ley_igua/adjuntos/mandatos.juridicos.generales.pdf';
+const enlaceOriginal=(url,label)=>`<a class="original" href="${url}" target="_blank" rel="noopener noreferrer">${esc(label)} <span class="sr-only">(se abre en otra pestaña)</span></a>`;
+const normaliza=s=>String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const anteriorSector=renderSector,anteriorInicio=renderInicio,anteriorJuridico=renderJuridico;
+renderSector=function(id){anteriorSector(id);const s=DATA.sectores[id];if(!s)return;
+ document.querySelector('.sector-resumen').insertAdjacentHTML('afterend',`<div class="fuente-original">${enlaceOriginal(PDF_BASE+PDF_SECTORES[id],'Abrir / descargar el material original de Emakunde (PDF)')}<p>Contenido de la edición ${esc(s.anio)}. Las referencias normativas y estadísticas se conservan como aparecen en el material de origen; no constituyen una actualización jurídica o estadística. Consulta el original y el marco jurídico oficial para comprobar su vigencia.</p>${enlaceOriginal(FUENTE_EMAKUNDE,'Consultar los materiales y el marco jurídico de Emakunde')}</div>`);
+ if(!document.getElementById('bl-datos'))document.querySelector('[data-id="datos"]')?.remove();
+};
+renderInicio=function(){anteriorInicio();document.querySelectorAll('.card p').forEach(p=>p.textContent=p.textContent.replace('texto íntegro','textos de consulta'));document.querySelector('.hero').insertAdjacentHTML('afterend',`<div class="fuente-original">${enlaceOriginal(FUENTE_EMAKUNDE,'Materiales originales y descargas en Emakunde')}<p>Esta guía organiza materiales de distintas fechas. Cada sector indica su edición. Cifras 2024 corresponde a esa publicación y no necesariamente a los últimos datos disponibles. Para citas y comprobación de tablas, consulta los PDF originales.</p></div>`);};
+renderJuridico=function(){anteriorJuridico();document.querySelector('.hero').insertAdjacentHTML('afterend',`<div class="fuente-original"><p>Transcripción de los materiales jurídicos de marzo de 2025. Comprueba posibles actualizaciones en la fuente oficial antes de aplicar una referencia.</p>${enlaceOriginal(PDF_MARCO,'Marco jurídico original (PDF)')} ${enlaceOriginal(PDF_MANDATOS,'Mandatos jurídicos originales (PDF)')}</div>`);};
+
+/* Indexar el contenido que se muestra, con un destino de sección preciso. */
+buildIndex=function(){const idx=[];const seen=new Set();const add=(ctx,html,route,bloque)=>{const box=document.createElement('div');box.innerHTML=html;box.querySelectorAll('p,li,pre,td,.mandato .txt,.mandato .norma,.tabla-cap .tt,.tabla-foot,h3,h4,.acc-tit').forEach(el=>{const txt=el.textContent.trim();const key=route+'|'+bloque+'|'+txt;if(txt.length>3&&!seen.has(key)){seen.add(key);idx.push({ctx,txt,route,bloque});}});};
+ for(const [sid,s] of Object.entries(DATA.sectores)){
+  const get=id=>s.secciones.find(x=>x.id===id);if(get('contexto'))add(s.nombre+' · Contextualización',renderSeccion(s,get('contexto')),'sector/'+sid,'contexto');
+  for(const [key,title] of DIMENSIONES){const ss=get('aspectos')?.subsecciones.find(x=>x.id===key);if(ss)add(s.nombre+' · '+title,renderDimension(s,{ss,titulo:title,id:'dim-'+key}),'sector/'+sid,'dim-'+key);}
+  add(s.nombre+' · Referencias',renderRefdoc(s,get('legislacion'),get('fuentes'),get('referencias')),'sector/'+sid,'refdoc');
+ }
+ for(const [aid,a] of Object.entries(DATA.cifras.ambitos))for(const ss of a.subsecciones){let html=(ss.bloques||[]).map(b=>renderBloque(a,b)).join('');html+=(ss.destacados||[]).map(d=>`<p>${esc(d.big)} ${esc(d.lab)}</p>`).join('');add('Cifras 2024 · '+a.nombre+' · '+ss.titulo,html,'cifras/'+aid,'');}
+ for(const g of JURIDICO.marco.grupos){const html=(g.secciones||[{items:g.items||[]}]).flatMap(s=>s.items||[]).map(t=>`<p>${esc(t)}</p>`).join('');add('Marco jurídico · '+g.amb,html,'juridico','marco');}
+ // Una entrada por línea conserva el contexto literal sin repetir la tabla completa.
+ add('Mandatos jurídicos generales',JURIDICO.mandatos.pre.split(/\n\s*\n|\f/).map(t=>`<pre>${esc(t)}</pre>`).join(''),'juridico','mandatos-g');return idx;
+};
+let limiteBusqueda=60;
+renderBuscar=function(q,limite=60){limiteBusqueda=limite;INDEX=INDEX||buildIndex();const words=normaliza(q.trim()).split(/\s+/).filter(Boolean);const all=words.length&&q.trim().length>=2?INDEX.filter(it=>words.every(w=>normaliza(it.txt).includes(w))):[];const shown=all.slice(0,limite);const hits=shown.map(r=>{let snippet=r.txt;let pos=normaliza(snippet).indexOf(words[0]);if(pos>120)snippet='…'+snippet.slice(pos-60);if(snippet.length>320)snippet=snippet.slice(0,320)+'…';return `<button type="button" class="hit" data-route="${r.route}" data-bloque="${r.bloque}" data-query="${encodeURIComponent(q)}"><span class="ctx">${esc(r.ctx)}</span><span class="hit-text">${esc(snippet)}</span></button>`;}).join('');
+ app.innerHTML=`<div class="crumbs"><button onclick="go('inicio')">Inicio</button><span>› Búsqueda</span></div><h1>Resultados para “${esc(q)}”</h1><p role="status">${all.length} coincidencia(s). Se muestran ${shown.length}.</p><div class="search-res">${hits||'<p>Sin resultados. Prueba con otros términos.</p>'}</div>${all.length>shown.length?'<button type="button" id="mas-resultados">Mostrar más resultados</button>':''}`;
+ document.querySelectorAll('.hit').forEach(btn=>btn.addEventListener('click',()=>go(btn.dataset.route+'?'+new URLSearchParams({bloque:btn.dataset.bloque,q:decodeURIComponent(btn.dataset.query)}))));
+ document.getElementById('mas-resultados')?.addEventListener('click',()=>{renderBuscar(q,limite+60);document.querySelectorAll('.hit')[shown.length]?.focus();});
+};
+function prepararAccesibilidad(){document.querySelectorAll('th[onclick]').forEach(th=>{th.tabIndex=0;th.setAttribute('role','button');th.setAttribute('aria-label','Ordenar por '+th.textContent.replace('↕','').trim());th.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();th.click();}};});document.querySelectorAll('pre').forEach(pre=>{pre.tabIndex=0;pre.setAttribute('role','region');pre.setAttribute('aria-label','Texto tabulado del original; desplazamiento horizontal disponible');});}
+const sortOriginal=sortTabla;
+sortTabla=function(id,col){sortOriginal(id,col);const box=document.getElementById(id);box.querySelectorAll('thead th').forEach((th,i)=>{th.setAttribute('aria-sort',i===col?(box._dir[col]==='asc'?'ascending':'descending'):'none');});};
+let observadorSecciones;
+setupScrollSpy=function(){observadorSecciones?.disconnect();const buttons=[...document.querySelectorAll('.subnav-b')];observadorSecciones=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){buttons.forEach(b=>b.classList.toggle('act','bl-'+b.dataset.id===e.target.id));}});},{rootMargin:'-110px 0px -65% 0px'});document.querySelectorAll('.content > .bloque').forEach(el=>observadorSecciones.observe(el));};
+function destinoBusqueda(params){const q=params.get('q');if(!q)return;const section=document.getElementById('bl-'+params.get('bloque'))||app;const words=normaliza(q).split(/\s+/).filter(Boolean);const match=[...section.querySelectorAll('p,li,pre,td,.txt,.norma,.tt,.tabla-foot,h3,h4,.acc-tit')].find(el=>words.every(w=>normaliza(el.textContent).includes(w)));const target=match||section;for(let el=target;el&&el!==app;el=el.parentElement)if(el.tagName==='DETAILS')el.open=true;target.tabIndex=-1;target.classList.add('coincidencia');requestAnimationFrame(()=>{target.focus({preventScroll:true});target.scrollIntoView({block:'center',behavior:'instant'});});}
+// Sustituir el manejador original para tolerar enlaces incompletos y destinos precisos.
+window.removeEventListener('hashchange',router);
+router=function(){observadorSecciones?.disconnect();const hash=location.hash.slice(1)||'inicio';const cut=hash.indexOf('?');const route=cut<0?hash:hash.slice(0,cut);const params=new URLSearchParams(cut<0?'':hash.slice(cut+1));const [base,...rest]=route.split('/');let arg=rest.join('/');try{arg=decodeURIComponent(arg)}catch{}
+ window.scrollTo(0,0);setActive(base);if(base==='sector')renderSector(arg);else if(base==='cifras'&&arg)renderAmbito(arg);else if(base==='cifras')renderCifras();else if(base==='juridico')renderJuridico();else if(base==='buscar'){qinput.value=arg;renderBuscar(arg);}else renderInicio();prepararAccesibilidad();destinoBusqueda(params);
+};
+window.addEventListener('hashchange',router);
+qinput.setAttribute('aria-label','Buscar en sectores, cifras y marco jurídico');
+let cerradosAlImprimir=[];
+window.addEventListener('beforeprint',()=>{cerradosAlImprimir=[...document.querySelectorAll('details:not([open])')];cerradosAlImprimir.forEach(el=>el.open=true);});
+window.addEventListener('afterprint',()=>{cerradosAlImprimir.forEach(el=>el.open=false);cerradosAlImprimir=[];});
+
 </script>
 </body>
 </html>
