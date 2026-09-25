@@ -217,9 +217,6 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
       <label><input type="radio" name="normcat" value="pres" onchange="onNormcatChange(this.value)"> <span data-t="ncPres">Norma presupuestaria (presupuestos y sus modificaciones)</span></label>
       <label><input type="radio" name="normcat" value="urb" onchange="onNormcatChange(this.value)"> <span data-t="ncUrb">Norma urbanística: Plan General de Ordenación Urbana y planes parciales o especiales (con fuerza normativa)</span></label>
       <label><input type="radio" name="normcat" value="subv" onchange="onNormcatChange(this.value)"> <span data-t="ncSubv">Bases reguladoras de subvenciones</span></label>
-      <div class="normcat-sub" data-t="ncgOtros">Otros instrumentos que se someten a EPIG por decisión municipal</div>
-      <label><input type="radio" name="normcat" value="plansect" onchange="onNormcatChange(this.value)"> <span data-t="ncPlansect">Resto de planes: sectoriales o estratégicos (sin fuerza normativa)</span></label>
-      <label><input type="radio" name="normcat" value="conv" onchange="onNormcatChange(this.value)"> <span data-t="ncConv">Convenio o subvención nominativa (vía decreto)</span></label>
       <div class="normcat-sub" data-t="ncgExen">Supuestos que pueden acogerse a exención</div>
       <label><input type="radio" name="normcat" value="modif" onchange="onNormcatChange(this.value)"> <span data-t="ncModif">Modificación o refundición de una norma existente</span></label>
       <label><input type="radio" name="normcat" value="org" onchange="onNormcatChange(this.value)"> <span data-t="ncOrg">Norma de carácter organizativo puro (estructura orgánica, órganos consultivos solo de personal, registros, nombramientos y ceses)</span></label>
@@ -249,6 +246,8 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
   <div id="cascade-acto" style="display:none; margin-top:16px; padding:16px; background:var(--bg-lavender); border-radius:8px; border:1px solid var(--light-purple)">
     <label class="field" data-t="q9acto" style="margin-top:0">9. ¿Qué tipo de acto administrativo es?</label>
     <div class="radio-group">
+      <label><input type="radio" name="acttype" value="plansect" onchange="onActChange(this.value)"> <span data-t="ncPlansect">Resto de planes: sectoriales o estratégicos (sin fuerza normativa)</span></label>
+      <label><input type="radio" name="acttype" value="conv" onchange="onActChange(this.value)"> <span data-t="ncConv">Convenio o subvención nominativa (vía decreto)</span></label>
       <label><input type="radio" name="acttype" value="subvconv" onchange="onActChange(this.value)"> <span data-t="acSubv">Convocatoria anual de subvenciones</span></label>
       <label><input type="radio" name="acttype" value="empleo" onchange="onActChange(this.value)"> <span data-t="acEmpleo">Convocatoria de oferta pública de empleo</span></label>
       <label><input type="radio" name="acttype" value="traslado" onchange="onActChange(this.value)"> <span data-t="acTraslado">Concurso de traslados</span></label>
@@ -256,6 +255,10 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
     </div>
   </div>
 
+  <div id="bases-check" style="display:none">
+    <label class="field" data-t="basesQuestion">¿Las bases reguladoras de esta convocatoria ya cuentan con EPIG?</label>
+    <select id="f-bases-status" style="width:100%;padding:10px;margin-bottom:12px" onchange="onActChange('subvconv')"><option value="" data-t="chooseStatus">Seleccione</option><option value="si" data-t="modSi">Sí</option><option value="no" data-t="modNo">No</option><option value="unknown" data-t="unknownStatus">No consta</option></select>
+  </div>
   <div id="verif-result" style="display:none"></div>
 
   <div class="btn-row">
@@ -265,7 +268,13 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
 </div>
 <div class="section content" id="sec-3">
   <h2 data-t="exencionTitle">Informe de exención</h2>
-  <label class="field" data-t="justifique">Justifique la ausencia de pertinencia</label>
+  <div id="approval-fields">
+    <label class="field" data-t="approvalQuestion">Situación del informe del Servicio de Igualdad</label>
+    <select id="f-approval" style="width:100%;padding:10px;margin-bottom:12px" onchange="invalidateResult();syncApplicability()"><option value="pending" data-t="approvalPending">Sin informe favorable: solicitud pendiente</option><option value="approved" data-t="approvalYes">Informe favorable recibido</option></select>
+    <label class="field" for="f-approval-ref" data-t="approvalRef">Referencia y fecha del informe favorable</label>
+    <input id="f-approval-ref" type="text" style="margin-bottom:18px" oninput="syncApplicability()">
+  </div>
+  <label class="field" for="f-exempt-just" data-t="justifique">Justifique la ausencia de pertinencia</label>
   <textarea id="f-exempt-just" style="min-height:120px"></textarea>
   <div class="info-box">
     <strong data-t="recordatorio">RECORDATORIO:</strong><br>
@@ -479,7 +488,7 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
   <label class="field" data-t="firmante">Persona firmante (nombre, cargo y fecha)</label>
   <input type="text" id="f-signatory">
   <div class="btn-row">
-    <button class="btn btn-secondary" onclick="goTo(isExempt ? 3 : (isPlan ? 'plan' : 6))" data-t="anterior">← Anterior</button>
+    <button class="btn btn-secondary" onclick="goTo(noEvaluation() ? 3 : (isPlan ? 'plan' : 6))" data-t="anterior">← Anterior</button>
     <button class="btn btn-dark" onclick="generateExcel()" data-t="descargarExcel">📊 Descargar Excel</button>
     <button class="btn btn-primary" onclick="generatePDF()" data-t="descargarPDF">📄 Descargar PDF</button>
     <button class="btn" style="background:#2b579a;color:#fff" onclick="generateWord()">📝 Descargar Word</button>
@@ -492,7 +501,7 @@ body{padding-bottom:110px} :focus-visible{outline:3px solid #115685;outline-offs
     <img src="data:image/png;base64,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" alt="Red Kuorum" style="height:32px">
   </div>
   <p data-t="footerText">Herramienta realizada con la asistencia técnica de Red Kuorum, S.L. para el Ayuntamiento de Portugalete, en el marco del proyecto de asesoramiento a la estrategia de implantación del mainstreaming de género en Portugalete, 2026.</p>
-  <p style="font-size:10px;opacity:.55">Herramienta EPIG · v1.4 · septiembre 2026</p>
+  <p style="font-size:10px;opacity:.55">Herramienta EPIG · v1.5 · septiembre 2026</p>
 </div>
 </div>
 <script>
@@ -632,6 +641,7 @@ let lang = "es";
 
 let currentSection = "1";
 let isExempt = false;
+let isOutside = false;
 let isPlan = false;
 let verifResolved = false;
 
@@ -657,6 +667,7 @@ function setLang(l) {
   if(window._vrKey){ const _r=document.getElementById("verif-result"); if(_r) _r.innerHTML=(MSGS[window._vrKey]&&(MSGS[window._vrKey][lang]||MSGS[window._vrKey].es))||window._vrKey; }
   updateNav();
   ensureLabels();
+  if(isOutside&&document.querySelector('[name="acttype"]:checked')?.value==='subvconv')onActChange('subvconv');
   if(currentSection==="6") buildSummary();
   if(!restoringDraft) autoSave();
 }
@@ -772,6 +783,7 @@ function goTo(sec) {
 }
 
 function updateNav() {
+  syncApplicability();
   const nav = document.getElementById("nav-bar");
   const exemptSecs = ["1","2","3","7"];
   const fullSecs = ["1","2","4","41","42","43","5","6","7"];
@@ -780,7 +792,7 @@ function updateNav() {
     "1":"navDatos","2":"navVerif","3":"navExencion","4":"navPresencia","41":"navParticipacion",
     "42":"navRecursos","43":"navReconocimiento","5":"navNormativa","6":"navResumen","7":"navResultado","plan":"navPlan"
   };
-  const secs = !verifResolved ? ["1","2"] : (isExempt ? exemptSecs : (isPlan ? planSecs : fullSecs));
+  const secs = !verifResolved ? ["1","2"] : (noEvaluation() ? exemptSecs : (isPlan ? planSecs : fullSecs));
   nav.innerHTML = secs.map(s =>
     `<button class="nav-btn${s===currentSection?' active':''}" onclick="goTo('${s}')"><span>${t(secLabels[s])}</span></button>`
   ).join("");
@@ -810,6 +822,8 @@ const MSGS={
 };
 
 function onInstrChange(val){
+  if(!restoringDraft)document.getElementById('f-bases-status').value='';
+  if(!restoringDraft){document.getElementById('f-approval').value='pending';document.getElementById('f-approval-ref').value='';}
   invalidateResult();
   if(!restoringDraft) clearRadios(val==="norma"?"normcat":"acttype");
   if(val!=="norma") {clearRadios("normcat");clearRadios("modif-epig");clearRadios("modif-sust");}
@@ -819,7 +833,7 @@ function onInstrChange(val){
   document.getElementById("cascade-modif").style.display="none";
   document.getElementById("verif-result").style.display="none";
   document.getElementById("btn-next-verif").style.display="none";
-  isExempt=false; isPlan=false; verifResolved=false; window._vrKey=""; window.exemptReason="";
+  isExempt=false; isOutside=false; isPlan=false; verifResolved=false; window._vrKey=""; window.exemptReason="";
   updateNav();
 }
 
@@ -828,9 +842,10 @@ function onInstrChange(val){
 const REQUIERE_EPIG = ["ord","reg","pres","urb","subv","conv"];
 
 function onNormcatChange(val){
+  if(!restoringDraft){document.getElementById('f-approval').value='pending';document.getElementById('f-approval-ref').value='';}
   invalidateResult();
   clearRadios("acttype");
-  isExempt=false;window.exemptReason="";
+  isExempt=false;isOutside=false;window.exemptReason="";
   isPlan = (val==="plansect");
   verifResolved=false;
   window._vrKey="";
@@ -846,6 +861,7 @@ function onNormcatChange(val){
 }
 
 function onModifChange(){
+  if(!restoringDraft){document.getElementById('f-approval').value='pending';document.getElementById('f-approval-ref').value='';}
   invalidateResult();
   const e=(document.querySelector('input[name="modif-epig"]:checked')||{}).value;
   const su=(document.querySelector('input[name="modif-sust"]:checked')||{}).value;
@@ -857,17 +873,28 @@ function onModifChange(){
 }
 
 function onActChange(val){
-  invalidateResult();isPlan=false;clearRadios("normcat");clearRadios("modif-epig");clearRadios("modif-sust");
-  verifResolved=false;
+  invalidateResult();isPlan=false;isExempt=false;isOutside=false;window.exemptReason="";
+  clearRadios("normcat");clearRadios("modif-epig");clearRadios("modif-sust");
+  verifResolved=false;window._vrKey="";
   document.getElementById("cascade-modif").style.display="none";
-  if(val==="subvconv"){ isExempt=true; window.exemptReason="Convocatoria anual de subvenciones (art\u00edculo 23): fuera de EPIG"; setVR("ex","art23"); }
-  else if(val==="empleo"||val==="traslado"){ isExempt=false; window.exemptReason=""; setVR("epig","epig"); }
-  else { isExempt=true; window.exemptReason="Otro acto administrativo"; setVR("ex","ex"); }
+  document.getElementById("bases-check").style.display=val==="subvconv"?"block":"none";
+  if(val==="plansect"){isPlan=true;setVR("epig","plan");}
+  else if(["empleo","traslado","conv"].includes(val))setVR("epig","epig");
+  else {
+    isOutside=true;
+    window.exemptReason=val==="subvconv"?"Convocatoria anual de subvenciones (artículo 23): fuera de EPIG":"Otro acto administrativo";
+    setVR("outside",val==="subvconv"?"art23":"outside");
+    if(val==="subvconv"){
+      const answer=document.getElementById('f-bases-status').value;
+      if(answer!=="si")document.getElementById('verif-result').innerHTML+='<p>'+ui('Revise con el Servicio de Igualdad la evaluación de las bases reguladoras. Esta comprobación no convierte automáticamente la convocatoria en una EPIG ni en una solicitud de exención.','Berrikusi Berdintasun Zerbitzuarekin oinarri arautzaileen ebaluazioa. Horrek ez du deialdia automatikoki GIAE edo salbuespen-eskaera bihurtzen.')+'</p>';
+      if(!answer){verifResolved=false;document.getElementById('btn-next-verif').style.display='none';}
+    }
+  }
   updateNav();
 }
 
 function nextAfterVerif(){
-  goTo(isExempt ? "3" : (isPlan ? "plan" : "4"));
+  goTo(noEvaluation() ? "3" : (isPlan ? "plan" : "4"));
 }
 
 const ORIENT_D1 = `¿Qué se analiza en este apartado?
@@ -1263,7 +1290,7 @@ function buildSummary() {
 }
 
 // ===== EXCEL =====
-const APP_VERSION = "Herramienta EPIG Portugalete · v1.4 · septiembre 2026";
+const APP_VERSION = "Herramienta EPIG Portugalete · v1.5 · septiembre 2026";
 
 // Convierte los códigos internos en etiquetas legibles en el idioma activo
 function codeLabel(kind, code) {
@@ -1273,7 +1300,7 @@ function codeLabel(kind, code) {
   const maps = {
     timing:{t1:"timing1",t2:"timing2",t3:"timing3",t4:"timing4"},
     instr:{norma:"instrNorma",acto:"instrActo"},
-    acttype:{empleo:"actEmpleo",traslado:"actTraslado",subvconv:"actSubvconv",otro:"actOtro"}
+    acttype:{plansect:"ncPlansect",conv:"ncConv",empleo:"actEmpleo",traslado:"actTraslado",subvconv:"actSubvconv",otro:"actOtro"}
   };
   const key = maps[kind] && maps[kind][code];
   const lbl = key ? t(key) : "";
@@ -1297,10 +1324,13 @@ function generateExcel() {
     [eu?"Unea":"Momento",codeLabel("timing",r("timing"))],[],
     [eu?"EGIAZTAPENA":"VERIFICACIÓN"],
     [eu?"Tresna":"Instrumento",codeLabel("instr",r("instr"))],
-    [eu?"Salbuespena":"Exención",EX_T(window.exemptReason||"")],
+    [eu?"Egoera":"Estado",applicabilityLabel()],
+    [eu?"Arrazoia":"Motivo",EX_T(window.exemptReason||"")],
+    ["Informe favorable",isExempt?v("f-approval-ref"):""],
+    ["Bases reguladoras evaluadas",isOutside?v("f-bases-status"):""],
     [strip(L.normType),r("instr")==="acto" ? codeLabel("acttype",r("acttype")) : codeLabel("normcat",r("normcat"))],
-    [eu?"Salbuespenaren justifikazioa":"Justificación de exención",isExempt?v("f-exempt-just"):""],
-    [eu?"Ebaluazio mota":"Tipo evaluación",(typeof isPlan!=="undefined"&&isPlan)?(eu?"Plan sektoriala":"Plan sectorial"):((typeof isExempt!=="undefined"&&isExempt)?(eu?"Salbuespena":"Exención"):(eu?"GEAE osoa":"EPIG completa"))],
+    [eu?"Salbuespenaren justifikazioa":"Justificación de exención",noEvaluation()?v("f-exempt-just"):""],
+    [eu?"Ebaluazio mota":"Tipo evaluación",applicabilityLabel()],
     [eu?"Arauaren izena":"Denominación norma",v("f-normname")]
   ]);
   ws1["!cols"]=[{wch:22},{wch:60}];
@@ -1360,7 +1390,7 @@ function generateExcel() {
   }
 
   // Resultado sheet
-  const ws5 = XLSX.utils.aoa_to_sheet([[eu?"EMAITZA":"RESULTADO"],[],[eu?"Balorazioa":"Valoración",codeLabel("result",r("result"))],[strip(L.justif),v("f-result-just")],[strip(L.signatory),v("f-signatory")],[],[APP_VERSION]]);
+  const ws5 = XLSX.utils.aoa_to_sheet([[eu?"EMAITZA":"RESULTADO"],[],[eu?"Balorazioa":"Valoración",(noEvaluation()?applicabilityLabel():codeLabel("result",r("result")))],[strip(L.justif),v("f-result-just")],[strip(L.signatory),v("f-signatory")],[],[APP_VERSION]]);
   ws5["!cols"]=[{wch:15},{wch:60}];
   XLSX.utils.book_append_sheet(wb,ws5,eu?"Emaitza":"Resultado");
 
@@ -1382,11 +1412,13 @@ function generateExcel() {
       ["instr", r("instr")],
       ["acttype", r("acttype")],
       ["exempt", window.exemptReason || ""],
-      ["exemptJust", isExempt?v("f-exempt-just"):""],
+      ["exemptJust", noEvaluation()?v("f-exempt-just"):""],
       ["normcat", r("instr")==="norma"?r("normcat"):""],
       ["normname", v("f-normname")],
-      ["tipoEval", (typeof isPlan!=="undefined"&&isPlan) ? "plan" : ((typeof isExempt!=="undefined"&&isExempt) ? "exempt" : "epig")],
-      ["result", r("result")],
+      ["tipoEval", applicabilityType()],
+      ["approvalRef",isExempt?v("f-approval-ref"):""],
+      ["basesStatus",isOutside?v("f-bases-status"):""],
+      ["result", noEvaluation()?applicabilityType():r("result")],
       ["justif", v("f-result-just")],
       ["signatory", v("f-signatory")],
       ["legalExpl", v("f-legal-expl")]
@@ -1474,14 +1506,14 @@ function buildReportHTML(forWord) {
   const resultLabels = L.result;
   const {trans:MANDT, sect:MANDS} = getMandates();
   const normcatCode = r("normcat");
-  const ACT_TKEY = {subvconv:"acSubv",empleo:"acEmpleo",traslado:"acTraslado",otro:"acOtro"};
+  const ACT_TKEY = {plansect:"ncPlansect",conv:"ncConv",subvconv:"acSubv",empleo:"acEmpleo",traslado:"acTraslado",otro:"acOtro"};
   const actCode = r("acttype");
   const normcatLabel = (r("instr")==="acto" && actCode)
     ? (t("instrActo") + " — " + t(ACT_TKEY[actCode]))
     : (normcatCode ? (t(NORMCAT_TKEY[normcatCode]) || normcatCode) : L.noIndic);
   // La exención se toma del estado real del flujo de verificación
   // (variable global isExempt / motivo de exención), no de un radio inexistente.
-  const isExemptDoc = (typeof isExempt !== "undefined" && isExempt) || !!(window.exemptReason);
+  const isExemptDoc = noEvaluation();
   const isPlanDoc = (typeof isPlan !== "undefined" && isPlan) && !isExemptDoc;
 
   let h = "";
@@ -1551,10 +1583,11 @@ thead tr,th,th p{page-break-after:avoid;break-after:avoid}
   h += `<div class="f"><span class="lb">${lang==="eu"?"Prozeduraren unea:":"Momento procedimental:"}</span> ${esc(codeLabel("timing",r("timing"))) || "—"}</div>`;
 
   if(isExemptDoc) {
-    h += `<h2>${L.s2Exen}</h2>`;
+    h += `<h2>${applicabilityLabel()}</h2>`;
     h += `<div class="f"><span class="lb">${L.exenReason}</span> ${EX_T(window.exemptReason||"")||"—"}</div>`;
     h += `<div class="f"><span class="lb">${L.justif}</span><br>${v("f-exempt-just").replace(/\n/g,"<br>")}</div>`;
-    h += `<div class="f" style="background:#F5F0F7;padding:10px;border-radius:4px;border-left:3px solid #7B2D8E;font-size:9.5pt"><strong>${L.note}</strong> ${L.exenNote}</div>`;
+    h += `<div class="f" style="background:#F5F0F7;padding:10px;border-radius:4px;border-left:3px solid #7B2D8E;font-size:9.5pt"><strong>${L.note}</strong> ${esc(applicabilityNote())}</div>
+      <div>${isExempt?esc(document.getElementById("f-approval-ref").value):esc(document.getElementById("f-bases-status").value)}</div>`;
   } else if(isPlanDoc) {
     // 2. Plan sectorial: cuestionario en cascada + transversales
     const PC = (typeof PLAN_CONTENT!=="undefined" && PLAN_CONTENT[lang]) ? PLAN_CONTENT[lang] : PLAN_CONTENT.es;
@@ -1627,7 +1660,7 @@ thead tr,th,th p{page-break-after:avoid;break-after:avoid}
 
   // Resultado
   h += `<h2>${(isExemptDoc||isPlanDoc) ? "3" : "5"}. ${L.sResult}</h2>`;
-  h += `<div class="f" style="padding:12px;border:2px solid ${r("result")==="POS"?"#38a169":"#e53e3e"};border-radius:6px;font-weight:bold;font-size:12pt;color:${r("result")==="POS"?"#38a169":"#e53e3e"}">${resultLabels[r("result")]||L.noResult}</div>`;
+  h += `<div class="f" style="padding:12px;border:2px solid ${noEvaluation()?"#115685":r("result")==="POS"?"#38a169":"#e53e3e"};border-radius:6px;font-weight:bold;font-size:12pt;color:${noEvaluation()?"#115685":r("result")==="POS"?"#38a169":"#e53e3e"}">${noEvaluation()?applicabilityLabel():(resultLabels[r("result")]||L.noResult)}</div>`;
   h += `<div class="f"><span class="lb">${L.justif}</span><br>${v("f-result-just").replace(/\n/g,"<br>") || "<em>"+L.noJustif+"</em>"}</div>`;
   h += `<div class="f" style="margin-top:18px;padding-top:10px;border-top:2px solid #D9B3E3"><span class="lb">${L.signatory}</span> ${v("f-signatory") || ""}</div>`;
   h += `<div class="ft">${t("footerText")}<br><span style="opacity:.6;font-size:7.5pt">${APP_VERSION}</span></div>`;
@@ -1714,7 +1747,7 @@ function validateEvaluation() {
       else if(!Number.isSafeInteger(Number(a))||!Number.isSafeInteger(Number(b))||Number(a)<0||Number(b)<0||Number(a)>Number(b)) add('plan-s'+n+'-a',`Revise el paso ${n}: use enteros no negativos y una cantidad que no supere el total.`,`Berrikusi ${n}. urratsa: erabili zenbaki oso ez-negatiboak; kopuruak ezin du guztizkoa gainditu.`);
       if(!fieldValue('plan-s'+n+'-expl').trim()) add('plan-s'+n+'-expl',`Explique la respuesta del paso ${n}, también si el total es cero.`,`Azaldu ${n}. urratseko erantzuna, guztizkoa zero bada ere.`);
     }
-  } else if(isExempt) {
+  } else if(noEvaluation()) {
     if(!fieldValue('f-exempt-just').trim()) add('f-exempt-just','Incluya la justificación de la solicitud de exención.','Sartu salbuespen-eskaeraren justifikazioa.');
   } else if(verifResolved) {
     ['d1','d2','d3','d4'].forEach((dk,i)=>{
@@ -1722,9 +1755,10 @@ function validateEvaluation() {
       if(!chosen('gap-'+dk)||!chosen('prev-'+dk)) add('f-'+dk+'-diag',`Responda las preguntas de brecha y contribución de la dimensión ${i+1}.`,`Erantzun ${i+1}. dimentsioaren arrakalari eta ekarpenari buruzko galderei.`);
     });
   }
-  if(!chosen('result')) add('f-result-just','Seleccione la valoración final.','Hautatu azken balorazioa.');
+  if(!noEvaluation()&&!chosen('result')) add('f-result-just','Seleccione la valoración final.','Hautatu azken balorazioa.');
   if(!fieldValue('f-result-just').trim()) add('f-result-just','Justifique la valoración final.','Justifikatu azken balorazioa.');
   if(!fieldValue('f-signatory').trim()) add('f-signatory','Identifique a la persona firmante.','Identifikatu sinatzailea.');
+  if(isExempt&&fieldValue('f-approval')==='approved'&&!fieldValue('f-approval-ref').trim())add('f-approval-ref','Identifique el informe favorable y su fecha.','Adierazi aldeko txostena eta data.');
   return issues;
 }
 function showValidation(issues) {
@@ -1784,6 +1818,10 @@ function validateDraft(state) {
   return state;
 }
 function restoreState(state) {
+  state=JSON.parse(JSON.stringify(state));
+  if(state?._radios?.instr==='norma'&&['plansect','conv'].includes(state._radios.normcat)){
+    state._radios.instr='acto';state._radios.acttype=state._radios.normcat;delete state._radios.normcat;
+  }
   validateDraft(state); // validar completamente antes de modificar ningún dato
   restoringDraft=true;
   try {
@@ -1914,6 +1952,38 @@ window.addEventListener("pagehide", autoSave);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden") autoSave();});
 // Auto-load on page load (after a short delay for DOM to settle)
 document.addEventListener("DOMContentLoaded",autoLoad,{once:true});
+
+// Applicability states are shared by the interface and all exported formats.
+function noEvaluation(){return isOutside||isExempt;}
+function applicabilityType(){
+  if(isOutside)return 'outside';
+  if(isExempt)return document.getElementById('f-approval').value==='approved'&&document.getElementById('f-approval-ref').value.trim()?'exempt_granted':'exempt_request';
+  return isPlan?'plan':'epig';
+}
+function applicabilityLabel(){return ({outside:ui('Fuera de EPIG','GIAEtik kanpo'),exempt_request:ui('Solicitud de exención','Salbuespen-eskaera'),exempt_granted:ui('Exención concedida','Emandako salbuespena'),plan:ui('EPIG simplificada de planes','Planen GIAE sinplifikatua'),epig:ui('EPIG completa','GIAE osoa')})[applicabilityType()];}
+function applicabilityNote(){
+  if(isOutside)return ui('No sujeto a EPIG. No constituye una solicitud ni una concesión de exención. Se mantienen las obligaciones de igualdad aplicables.','Ez dago GIAEren mende. Ez da salbuespen-eskaera edo ematea. Berdintasun-betebehar aplikagarriak mantentzen dira.');
+  if(applicabilityType()==='exempt_granted')return ui('Exención concedida según el informe favorable identificado por la persona cumplimentadora. Se mantienen las obligaciones de igualdad aplicables.','Salbuespena emanda, betetzaileak identifikatutako aldeko txostenaren arabera. Berdintasun-betebehar aplikagarriak mantentzen dira.');
+  return ui('Solicitud pendiente. La herramienta no concede la exención: se requiere informe favorable previo del Servicio de Igualdad.','Eskaera zain. Tresnak ez du salbuespena ematen: Berdintasun Zerbitzuaren aurretiazko aldeko txostena behar da.');
+}
+function syncApplicability(){
+  const section=document.getElementById('sec-3');if(!section)return;
+  section.querySelector('h2').textContent=applicabilityLabel();
+  section.querySelector('[data-t="justifique"]').textContent=isOutside?ui('Justifique la no sujeción y deje constancia de la revisión de las bases, cuando proceda.','Justifikatu ez-sujekzioa eta, hala badagokio, oinarrien berrikuspena.'):ui('Justifique la causa de exención solicitada.','Justifikatu eskatutako salbuespenaren arrazoia.');
+  document.getElementById('approval-fields').style.display=isExempt?'block':'none';
+  const title=document.querySelector('#sec-7 [data-t="valoracionQ"]');
+  title.style.display=noEvaluation()?'none':'';title.nextElementSibling.style.display=noEvaluation()?'none':'';
+  if(noEvaluation())clearRadios('result');
+  for(const l of ['es','eu'])T[l].navExencion=isOutside?(l==='es'?'Fuera de EPIG':'GIAEtik kanpo'):(l==='es'?'Exención':'Salbuespena');
+  const note=document.getElementById('applicability-status');if(note){note.textContent=noEvaluation()?applicabilityLabel()+'. '+applicabilityNote():'';note.hidden=!noEvaluation();}
+  document.getElementById('bases-check').style.display=document.querySelector('[name="acttype"]:checked')?.value==='subvconv'?'block':'none';
+}
+Object.assign(T.es,{basesQuestion:'¿Las bases reguladoras de esta convocatoria ya cuentan con EPIG?',chooseStatus:'Seleccione',unknownStatus:'No consta',approvalQuestion:'Situación del informe del Servicio de Igualdad',approvalPending:'Sin informe favorable: solicitud pendiente',approvalYes:'Informe favorable recibido',approvalRef:'Referencia y fecha del informe favorable'});
+Object.assign(T.eu,{basesQuestion:'Deialdi honen oinarri arautzaileek badute GIAE?',chooseStatus:'Hautatu',unknownStatus:'Ez dago jasota',approvalQuestion:'Berdintasun Zerbitzuaren txostenaren egoera',approvalPending:'Aldeko txostenik gabe: eskaera zain',approvalYes:'Aldeko txostena jasota',approvalRef:'Aldeko txostenaren erreferentzia eta data'});
+MSGS.outside={es:'→ Fuera de EPIG. Este acto administrativo no requiere solicitar una exención. Se mantienen las obligaciones de igualdad aplicables.',eu:'→ GIAEtik kanpo. Administrazio-egintza honek ez du salbuespen-eskaerarik behar. Berdintasun-betebehar aplikagarriak mantentzen dira.'};
+document.addEventListener('DOMContentLoaded',()=>{
+  const note=document.createElement('p');note.id='applicability-status';note.className='info-box';document.querySelector('#sec-7 h2').after(note);syncApplicability();
+});
 
 </script>
 
